@@ -1,0 +1,7 @@
+{
+  "name": "PAI SMART LEARNING UPT SMPN 2 REBANG TANGKAS",
+  "description": "Media Pembelajaran Pendidikan Agama Islam dan Budi Pekerti UPT SMPN 2 Rebang Tangkas untuk Siswa SMP Kelas VII, VIII, dan IX",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
