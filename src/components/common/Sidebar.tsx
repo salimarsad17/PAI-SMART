@@ -140,24 +140,24 @@ export const Sidebar: React.FC<SidebarProps> = ({ role, isOpen, onClose }) => {
 
       {/* Sidebar Container */}
       <aside
-        className={`fixed top-0 bottom-0 left-0 z-40 w-64 bg-white border-r border-slate-200 transition-transform duration-300 ease-in-out lg:translate-x-0 flex flex-col no-print ${
+        className={`fixed top-0 bottom-0 left-0 z-40 w-64 bg-sky-50/70 border-r border-sky-200 transition-transform duration-300 ease-in-out lg:translate-x-0 flex flex-col no-print ${
           isOpen ? 'translate-x-0 shadow-2xl' : '-translate-x-full'
         }`}
       >
         {/* Header Branding */}
-        <div className="h-16 px-5 border-b border-slate-100 flex items-center justify-between">
+        <div className="h-16 px-5 border-b border-sky-200 bg-sky-100/70 flex items-center justify-between">
           <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-bold shadow-xs">
+            <div className="w-8 h-8 rounded-xl bg-amber-500 flex items-center justify-center text-slate-950 font-black shadow-xs">
               PAI
             </div>
             <div>
-              <p className="text-xs font-bold text-slate-800 leading-tight">PAI SMART</p>
-              <p className="text-[10px] text-slate-400 font-medium">SMPN 2 Rebang Tangkas</p>
+              <p className="text-xs font-black text-black leading-tight">PAI SMART</p>
+              <p className="text-[10px] text-slate-600 font-semibold">SMPN 2 Rebang Tangkas</p>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="lg:hidden p-1.5 text-slate-400 hover:text-slate-600 rounded-lg"
+            className="lg:hidden p-1.5 text-slate-600 hover:text-black rounded-lg"
           >
             <X className="w-5 h-5" />
           </button>
@@ -167,10 +167,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ role, isOpen, onClose }) => {
         <div className="flex-1 overflow-y-auto px-3 py-4 space-y-6">
           {navGroups.map((group, gIdx) => (
             <div key={gIdx} className="space-y-1">
-              <p className="px-3 text-[10px] uppercase font-bold text-slate-400 tracking-wider">
+              <p className="px-3 text-[10px] uppercase font-black text-slate-700 tracking-wider">
                 {group.group}
               </p>
-              <div className="space-y-0.5 mt-1">
+              <div className="space-y-1 mt-1">
                 {group.items.map((item, iIdx) => {
                   const Icon = item.icon;
                   const isActive =
@@ -185,22 +185,22 @@ export const Sidebar: React.FC<SidebarProps> = ({ role, isOpen, onClose }) => {
                       onClick={() => {
                         if (window.innerWidth < 1024) onClose();
                       }}
-                      className={`flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
+                      className={`flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-bold transition-all cursor-pointer active:bg-emerald-600 active:text-amber-200 active:border-emerald-500 active:scale-[0.98] ${
                         isActive
-                          ? 'bg-emerald-600 text-white shadow-xs font-bold'
-                          : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                          ? 'bg-blue-600 text-white shadow-sm font-bold border border-blue-700 ring-2 ring-blue-400'
+                          : 'bg-sky-100/80 text-black font-bold hover:bg-sky-200/90 hover:border-sky-300 border border-sky-200/70'
                       }`}
                     >
                       <div className="flex items-center gap-3 truncate">
-                        <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-                        <span className="truncate">{item.label}</span>
+                        <Icon className={`w-4 h-4 shrink-0 font-bold drop-shadow-2xs ${isActive ? 'text-amber-300' : 'text-amber-500'}`} />
+                        <span className={`truncate font-bold ${isActive ? 'text-white' : 'text-black'}`}>{item.label}</span>
                       </div>
                       {(item as any).badge && (
                         <span
-                          className={`text-[9px] font-bold px-1.5 py-0.5 rounded-md ${
+                          className={`text-[9px] font-black px-1.5 py-0.5 rounded-md ${
                             isActive
-                              ? 'bg-emerald-700 text-amber-200'
-                              : 'bg-amber-100 text-amber-800'
+                              ? 'bg-amber-400 text-amber-950 shadow-2xs'
+                              : 'bg-amber-300 text-amber-950'
                           }`}
                         >
                           {(item as any).badge}
@@ -215,7 +215,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ role, isOpen, onClose }) => {
         </div>
 
         {/* Footer Logout & Identity */}
-        <div className="p-3 border-t border-slate-100 bg-slate-50/70 space-y-2">
+        <div className="p-3 border-t border-sky-200 bg-sky-100/60 space-y-2">
           <div className="px-2 py-1">
             <p className="text-[10px] font-bold text-slate-500 truncate">
               {role === 'GURU' ? 'Mode Guru / Pendidik' : 'Mode Peserta Didik'}

@@ -733,7 +733,7 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     semester: 'Semester 2',
     chapterNumber: 8,
     title: 'Menerapkan Makna Cinta Ilmu: Menumbuhkan Semangat Literasi dan Riset untuk Kemajuan Bangsa',
-    cpElement: 'Akidah & Akhlak',
+    cpElement: 'Akhlak',
     hasFullTextbook: true,
     mainDalil: 'Q.S. Al-Mujādilah [58]: 11, Q.S. Az-Zumar [39]: 9, Q.S. Thāhā [20]: 114, & H.R. Ibnu Majah No. 224',
     learningObjectives: [
@@ -780,23 +780,50 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas VIII',
     semester: 'Semester 2',
     chapterNumber: 9,
-    title: 'Menumbuhkan Kepedulian Sosial melalui Sedekah, Hibah, dan Hadiah',
+    title: 'Menerapkan Ketentuan Haji dan Umrah: Meneladani Ketaatan dan Mempererat Ukhuwah Islamiyah Dunia',
     cpElement: 'Fikih',
-    mainDalil: 'Q.S. Al-Baqarah: 261 & Hadits Riwayat Bukhari',
+    hasFullTextbook: true,
+    mainDalil: "Q.S. Ali 'Imran [3]: 97, Q.S. Al-Baqarah [2]: 196, Q.S. Al-Hajj [22]: 27, H.R. Bukhari No. 1773 & Muslim No. 1349",
     learningObjectives: [
-      'Menjelaskan perbedaan sedekah, hibah, dan hadiah',
-      'Menganalisis hikmah dan manfaat filantropi Islam bagi kesejahteraan masyarakat',
-      'Membiasakan gemar berbagi dan bersedekah secara ikhlas'
+      'Menjelaskan pengertian haji dan umrah secara bahasa dan istilah syariat, hukum kewajiban, serta perbedaan mendasar keduanya',
+      'Menganalisis ketentuan syarat wajib haji/umrah, rukun haji (Ihram, Wukuf di Arafah, Thawaf Ifadhah, Sa\'i, Tahallul, Tertib), rukun umrah, wajib haji, larangan ihram, dan macam-macam dam (denda)',
+      'Mengidentifikasi dan membedakan 3 tata cara pelaksanaan haji (Ifrad, Tamattu\', dan Qiran) beserta kelebihan, urutan, dan konsekuensi dam nusuk',
+      'Memahami dan mensimulasikan alur manasik haji praktis step-by-step (Hari Tarwiyah 8 Dzulhijjah, Wukuf Arafah 9 Dzulhijjah, Mabit Muzdalifah, Jumrah Aqabah, Thawaf Ifadhah, Sa\'i, Mabit Mina, hingga Thawaf Wada\') serta melafalkan bacaan Talbiyah',
+      'Menghayati 5 dimensi hikmah luhur ibadah haji dan umrah (spiritual tauhid, kesetaraan sosial dan ukhuwah islamiyah sedunia, pendidikan akhlak dan kesabaran, serta kemaslahatan umat)',
+      'Mendiskusikan studi kasus kontekstual seputar ibadah haji modern (antrean panjang, etika bermedsos saat ibadah), mengisi lembar muhasabah 8 indikator, dan menuntaskan evaluasi HOTS'
     ],
-    keyTerms: ['Sedekah', 'Hibah', 'Hadiah', 'Infaq', 'Filantropi Islam', 'Ukhuwah Insaniyah'],
-    summary: 'Sedekah adalah pemberian sukarela mengharap pahala Allah. Hibah adalah pemberian sukarela atas dasar kasih sayang. Hadiah diberikan sebagai bentuk penghargaan atau penghormatan. Saling memberi hadiah menumbuhkan cinta kasih dan mengikis kedengkian di dalam hati.',
+    keyTerms: [
+      'Haji',
+      'Umrah',
+      'Istitha\'ah',
+      'Rukun Haji',
+      'Wajib Haji',
+      'Wukuf di Arafah',
+      'Thawaf Ifadhah',
+      'Sa\'i (Shafa-Marwah)',
+      'Tahallul',
+      'Miqat Zamani & Makani',
+      'Haji Tamattu\'',
+      'Haji Ifrad',
+      'Haji Qiran',
+      'Lafaz Talbiyah',
+      'Dam (Denda Haji)',
+      'Mabit (Muzdalifah & Mina)',
+      'Melontar Jumrah',
+      'Haji Mabrur'
+    ],
+    summary: 'Materi PAI Kelas VIII Semester 2 Bab 9 menyajikan panduan komprehensif Fikih Ibadah Haji dan Umrah mencakup 5 pilar utama: (1) Pengertian haji dan umrah secara etimologi dan syariat, kedudukan rukun Islam kelima, landasan dalil Al-Qur\'an (Q.S. Ali \'Imran: 97, Q.S. Al-Baqarah: 196, Q.S. Al-Hajj: 27) dan Hadis Nabi tentang surga bagi haji mabrur serta peleburan dosa, komparasi perbedaan haji vs umrah; (2) Ketentuan syarat sah dan wajib (Islam, Baligh, Berakal, Merdeka, Istitha\'ah), 6 Rukun Haji (Ihram, Wukuf di Arafah, Thawaf Ifadhah, Sa\'i, Tahallul, Tertib) yang tak tergantikan dam, 5 Rukun Umrah tanpa wukuf, 6 Wajib Haji (Miqat Makani, Mabit Muzdalifah, Mabit Mina, Lempar Jumrah, Thawaf Wada\', jauhi larangan), rincian larangan ihram pria/wanita, serta klasifikasi Dam (Tertib-Taqdir, Tertib-Ta\'dil, Takhyir-Ta\'dil, Takhyir-Taqdir); (3) Tata cara pelaksanaan 3 macam haji: Tamattu\' (dahulukan umrah lalu haji, wajib dam nusuk, paling fleksibel), Ifrad (haji dulu baru umrah, tanpa dam), dan Qiran (niat haji dan umrah sekaligus, wajib dam nusuk); (4) Panduan praktis Manasik Haji alur kronologis 8-13 Dzulhijjah, lafaz Talbiyah Arab-Latin-Arti beserta audio pelafalan, peta 5 Miqat Makani, doa-doa manasik; serta (5) 5 Dimensi hikmah agung haji dan umrah (penyucian jiwa, persaudaraan universal berkain kafan putih tanpa kasta, pembentukan akhlak sabar, napak tilas sejarah Ibrahim-Ismail-Muhammad, dan kemaslahatan ekonomi umat), studi kasus kontekstual, refleksi diri 8 indikator, dan 5 kuis HOTS evaluasi penalaran tingkat tinggi.',
     studentActivities: [
-      'Program Jumat Berkah: Berbagi makanan atau alat tulis dengan teman yang membutuhkan',
-      'Membuat daftar simulasi pembagian zakat, infak, dan sedekah'
+      'Menelaah dalil naqli Q.S. Ali \'Imran: 97 dan melafalkan kalimat Talbiyah dengan tartil dan penghayatan makna',
+      'Menganalisis perbedaan prinsipil antara rukun haji (pembatal) vs wajib haji (dapat ditebus dam) dan klasifikasi larangan ihram',
+      'Membuat peta komparasi 3 model pelaksanaan haji (Tamattu\', Ifrad, Qiran) beserta kelebihan dan beban amalan',
+      'Mensimulasikan alur manasik haji praktis step-by-step mulai dari Miqat, Arafah, Muzdalifah, Mina, hingga Thawaf Wada\' di Makkah',
+      'Mendiskusikan studi kasus etika haji masa kini (antrean panjang, fenomena swafoto/live medsos di depan Ka\'bah), mengisi lembar muhasabah 8 dimensi, serta menuntaskan soal HOTS'
     ],
     reflectionQuestions: [
-      'Bagaimana perasaanmu ketika berbagi kebahagiaan dengan orang yang kurang mampu?',
-      'Apakah kamu sudah membiasakan menyisihkan uang jajan untuk kotak infak?'
+      'Mengapa ibadah haji hanya diwajibkan bagi mereka yang telah memiliki kemampuan (istitha\'ah)? Bagaimana kamu melatih kemandirian sejak dini?',
+      'Pelajaran kesetaraan apa yang dapat kamu petik dari pakaian ihram putih tanpa jahitan yang dikenakan seluruh jamaah dari seluruh belahan dunia?',
+      'Bagaimana cara kamu menjaga kemabruran nilai-nilai haji (sabar, peduli, tidak berkata kotor/rafats) dalam pergaulan di sekolah sehari-hari?'
     ]
   },
   {
@@ -804,23 +831,54 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas VIII',
     semester: 'Semester 2',
     chapterNumber: 10,
-    title: 'Ilmuwan Muslim dan Kontribusinya bagi Dunia Modern',
+    title: 'Merefleksikan Diri terhadap Sejarah dan Peran Kekhalifahan Islam Pasca Khulafaur Rasyidin: Dinasti Turki Usmani',
     cpElement: 'Sejarah Peradaban Islam (SPI)',
-    mainDalil: 'Biografi Ibnu Sina, Al-Khawarizmi, dan Al-Biruni',
+    hasFullTextbook: true,
+    mainDalil: 'Q.S. Ar-Rūm [30]: 9, Q.S. Al-Anbiyā\' [21]: 105, Q.S. Muhammad [47]: 7, & H.R. Ahmad No. 18977',
     learningObjectives: [
-      'Menganalisis karya Ibnu Sina (Al-Qanun fi at-Tibb) dalam dunia kedokteran',
-      'Menganalisis penemuan angka nol dan aljabar oleh Al-Khawarizmi',
-      'Menumbuhkan rasa bangga dan percaya diri sebagai generasi muslim pembelajar'
+      'Menjelaskan latar belakang sejarah berdirinya Dinasti Turki Usmani (asal-usul suku Kayi, kepemimpinan Ertugrul, deklarasi 1299 M oleh Osman I, wasiat emas Osman, dan perluasan wilayah awal)',
+      'Menganalisis masa puncak kejayaan Dinasti Turki Usmani di bawah kepemimpinan 3 sultan besar: Sultan Muhammad Al-Fatih (penaklukan Konstantinopel 1453 M & toleransi Piagam Ahdnama), Sultan Salim I (penyatuan Hijaz & Khadimul Haramain), dan Sultan Sulaiman Al-Qanuni (kodifikasi hukum Kanunname, wilayah 3 benua, dan armada laut Barbarossa)',
+      'Mengidentifikasi 3 pilar peradaban Usmani: supremasi hukum Kanunname & sistem Millet yang toleran, kekuatan militer korps Yanisari & Sipahi, serta arsitektur monumental karya Mimar Sinan & sistem sosial wakaf Kulliye',
+      'Menganalisis faktor-faktor penyebab kemunduran Dinasti Turki Usmani: faktor internal (kemerosotan moral sultan & hedonisme, intrik politik harem, korupsi jual-beli jabatan, pemberontakan Yanisari, dan kemandekan intelektual larangan mesin cetak) serta faktor eksternal (Renaisans & Revolusi Industri Barat, kekalahan Wina 1683, Perjanjian Karlowitz, The Sick Man of Europe, hingga pembubaran kekhalifahan 1924 M)',
+      'Menghayati dan merefleksikan 4 dimensi hikmah sejarah Dinasti Turki Usmani dalam kehidupan sehari-hari (keteladanan visi Al-Fatih, supremasi hukum adil dan toleransi, ibrah bahaya hedonisme/korupsi, serta etos inovasi sains dan literasi teknologi modern)',
+      'Mendiskusikan 3 studi kasus reflektif sejarah, mengisi lembar muhasabah 8 dimensi karakter, dan menuntaskan evaluasi penalaran kuis HOTS'
     ],
-    keyTerms: ['Ibnu Sina (Avicenna)', 'Al-Khawarizmi', 'Al-Biruni', 'Aljabar', 'Metode Ilmiah'],
-    summary: 'Sejarah membuktikan bahwa ajaran Islam mendorong kemajuan sains dan teknologi. Al-Khawarizmi menemukan aljabar dan angka nol yang menjadi dasar komputasi komputer dan algoritma modern. Ibnu Sina menulis ensiklopedia kedokteran yang menjadi rujukan Eropa selama ratusan tahun.',
+    keyTerms: [
+      'Dinasti Turki Usmani',
+      'Ottoman Empire',
+      'Suku Kayi',
+      'Ertugrul Bey',
+      'Osman I (Usman Bey)',
+      'Tahun 1299 M',
+      'Wasiat Osman',
+      'Sultan Muhammad Al-Fatih (Mehmed II)',
+      'Penaklukan Konstantinopel 1453 M',
+      'Meriam Basilika',
+      'Hagia Sophia & Istanbul',
+      'Sultan Salim I',
+      'Khadimul Haramain',
+      'Sultan Sulaiman Al-Qanuni (The Magnificent)',
+      'Kanun-i Osmani (Kanunname)',
+      'Sistem Millet',
+      'Korps Yanisari (Janissary)',
+      'Mimar Sinan & Kulliye',
+      'Laksamana Khairuddin Barbarossa',
+      'The Sick Man of Europe',
+      'Pembubaran Kekhalifahan 1924 M'
+    ],
+    summary: 'Materi PAI Kelas VIII Semester 2 Bab 10 mengkaji secara komprehensif sejarah dan refleksi Dinasti Turki Usmani (1299–1924 M): 1. Sejarah Berdiri: Berawal dari migrasi suku Kayi pimpinan Sulaiman Shah dan Ertugrul yang membantu Kesultanan Seljuk Rum hingga diberi tanah Sogut, kemudian Osman I memproklamasikan kemerdekaan Kesultanan Usmani pada tahun 1299 M yang berlandaskan wasiat ketaatan syariat dan keadilan bagi rakyat; 2. Puncak Kejayaan: Ditandai penaklukan benteng legendaris Konstantinopel pada 29 Mei 1453 M oleh Sultan Muhammad Al-Fatih (usia 21 tahun) membuktikan sabda Rasulullah Saw. dengan strategi kapal ditarik lewat darat Bukit Galata, penyatuan Dua Kota Suci Makkah-Madinah oleh Sultan Salim I (1517 M), hingga puncak peradaban 3 benua pada masa Sultan Sulaiman Al-Qanuni dengan kodifikasi hukum Kanunname, toleransi sistem Millet, arsitektur megah Mimar Sinan, dan armada laut Barbarossa; 3. Faktor Kemunduran: Pelemahan akibat faktor internal (dekadensi moral para sultan hedonis, intrik politik harem, suap jual-beli jabatan, arogansi & pemberontakan korps Yanisari, dan kemandekan intelektual akibat penolakan mesin cetak selama hampir 300 tahun) serta faktor eksternal (Revolusi Industri Eropa, kekalahan Perang Wina 1683, Perjanjian Karlowitz 1699, julukan The Sick Man of Europe, hingga kekalahan PD I dan penghapusan kekhalifahan pada 3 Maret 1924 M); serta 4. 4 Dimensi Hikmah Sejarah: Meneladani visi mulia dan disiplin tahajud Al-Fatih, menjunjung supremasi hukum yang adil dan toleransi kebangsaan, menjauhi korupsi dan hedonisme, serta membekali diri dengan sains-teknologi modern demi kemajuan bangsa.',
     studentActivities: [
-      'Proyek infografis tokoh ilmuwan muslim dan bidang penemuannya',
-      'Kuis interaktif sains Islam'
+      'Menelaah dalil naqli Q.S. Ar-Rum: 9 dan hadits shahih penaklukan Konstantinopel H.R. Ahmad No. 18977',
+      'Mengeksplorasi garis waktu kronologis pendirian Usmani dari Suku Kayi, Osman I, hingga penaklukan Bursa dan Gallipoli',
+      'Menganalisis komparasi kepemimpinan 3 Sultan Keemasan (Muhammad Al-Fatih, Salim I, Sulaiman Al-Qanuni) dan 3 pilar peradaban (Kanunname, Militer Janissary, Arsitektur Mimar Sinan)',
+      'Membuat diagram analisis faktor internal vs eksternal kemunduran Daulah Usmani dan titik balik 1683–1924 M',
+      'Mendiskusikan 3 studi kasus etika sejarah (etos sederhana vs istana mewah Dolmabahce, benalu korupsi Yanisari, dan bahaya ketertinggalan literasi mesin cetak)',
+      'Mengisi instrumen muhasabah 8 indikator karakter penerus peradaban dan menuntaskan 5 soal kuis penalaran HOTS'
     ],
     reflectionQuestions: [
-      'Bagaimana penemuan Al-Khawarizmi memengaruhi teknologi ponsel dan komputer hari ini?',
-      'Cita-cita apa yang ingin kamu raih untuk memberi kontribusi bagi umat dan bangsa?'
+      'Pelajaran penting apa yang dapat kamu ambil dari strategi Sultan Muhammad Al-Fatih yang memadukan doa malam/tahajud dengan riset sains teknologi persenjataan modern?',
+      'Bagaimana cara kamu meneladani prinsip keadilan hukum Sultan Sulaiman Al-Qanuni dalam kehidupan di lingkungan sekolah dan keluarga?',
+      'Mengapa peradaban sebesar Turki Usmani yang bertahan lebih dari 6 abad bisa runtuh? Apa yang harus dihindari bangsa Indonesia agar tidak mengalami nasib serupa?'
     ]
   },
 
@@ -830,23 +888,52 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas IX',
     semester: 'Semester 1',
     chapterNumber: 1,
-    title: 'Meraih Ketenangan Jiwa dengan Meyakini Hari Akhir',
-    cpElement: 'Akidah',
-    mainDalil: 'Q.S. Al-Hajj: 7 & Q.S. Az-Zalzalah: 1-8',
+    title: 'Meraih Kemuliaan Derajat dengan Semangat Keilmuan: Q.S. Al-Mujādilah [58]: 11 & Q.S. Az-Zumar [39]: 9',
+    cpElement: 'Al-Qur\'an dan Hadis',
+    mainDalil: 'Q.S. Al-Mujādilah [58]: 11, Q.S. Az-Zumar [39]: 9, & H.R. Ibnu Majah No. 224',
+    hasFullTextbook: true,
     learningObjectives: [
-      'Menjelaskan tahapan peristiwa Hari Akhir (Kiamat Sugra, Kiamat Kubra, Ba\'ats, Mahsyar, Hisab, Mizan, Shirath, Surga-Neraka)',
-      'Menganalisis tanda-tanda datangnya hari kiamat',
-      'Menumbuhkan sikap mawas diri dan memperbanyak bekal amal saleh'
+      'Membaca Q.S. Al-Mujādilah: 11 dan Q.S. Az-Zumar: 9 secara tartil sesuai kaidah tajwid, khususnya hukum bacaan Mim Sukun (مْ)',
+      'Menghafal Q.S. Al-Mujādilah: 11, Q.S. Az-Zumar: 9, dan hadits tentang kewajiban menuntut ilmu dengan lancar dan fasih',
+      'Menuliskan penggalan ayat Al-Qur\'an dengan kaidah kaligrafi khat Naskhi yang benar dan rapi sesuai garis dasar buku',
+      'Menganalisis mufradat (kosakata kata per kata) dan menerjemahkan ayat ke dalam bahasa Indonesia secara kontekstual',
+      'Mengidentifikasi dan menerapkan seluruh hukum bacaan Mim Sukun: Ikhfa Syafawi (huruf Ba\'), Idgham Mimi (huruf Mim), dan Idzhar Syafawi (26 huruf lainnya, khusus Wawu dan Fa\')',
+      'Menjelaskan kandungan tafsir ayat tentang etika bermajelis (Tafassuh fil Majalis), keutamaan orang berilmu, dan karakteristik Ulul Albab',
+      'Meneladani dan menerapkan 6 dimensi hikmah semangat keilmuan dalam kehidupan sehari-hari serta memecahkan studi kasus etika AI dan integritas penuntut ilmu'
     ],
-    keyTerms: ['Hari Akhir (Kiamat)', 'Kiamat Sugra & Kubra', 'Yaumul Ba\'ats', 'Yaumul Hisab', 'Mizan'],
-    summary: 'Hari akhir adalah hari berakhirnya seluruh kehidupan di alam semesta. Setiap manusia akan dibangkitkan dan mempertanggungjawabkan segala perbuatannya. Menyakini hari akhir menjadikan hidup terarah, tidak terbuai gemerlap dunia, dan termotivasi melakukan kebajikan.',
+    keyTerms: [
+      'Q.S. Al-Mujādilah: 11',
+      'Q.S. Az-Zumar: 9',
+      'Mim Sukun (مْ)',
+      'Ikhfa Syafawi',
+      'Idgham Mimi (Mutamatsilain)',
+      'Idzhar Syafawi',
+      'Asyaddu Izhhar',
+      'Tafassuh fil Majalis',
+      'Al-Nusyuz (Bangkit Berdiri)',
+      'Yarfa\'illah (Derajat Mulia)',
+      'Ulul Albab',
+      'Qanit Lail (Tahajud)',
+      'Thalabul Ilmi Faridhatun',
+      'H.R. Ibnu Majah No. 224',
+      'H.R. Muslim No. 2699',
+      'Khat Naskhi',
+      'Tabayyun & Nalar Kritis'
+    ],
+    summary: 'Materi PAI Kelas IX Semester 1 Bab 1 membahas secara komprehensif 4 keterampilan Al-Qur\'an (membaca tartil, menghafal, menulis khat Naskhi, dan menjelaskan tafsir) serta penguasaan hukum bacaan Mim Sukun (مْ) berdasarkan Q.S. Al-Mujādilah [58]: 11, Q.S. Az-Zumar [39]: 9, dan hadis-hadis keilmuan: 1. Q.S. Al-Mujādilah: 11 mendidik adab berlapang dada dalam majelis (tafassuh fil majalis), kepatuhan bangkit melakukan kebaikan (insyuzu), dan janji Allah Swt. mengangkat derajat berlipat ganda bagi orang beriman dan berilmu di bawah pengawasan Al-Khabir; 2. Q.S. Az-Zumar: 9 melukiskan karakter Ulul Albab yang tunduk beribadah di waktu malam (qanit lail), menyeimbangkan rasa takut azab (khauf) dan harap rahmat (raja\'), serta menegaskan ketidaksetaraan mutlak antara orang yang berilmu dengan orang yang jahil; 3. Hukum Bacaan Mim Sukun terbagi menjadi tiga: Ikhfa Syafawi (bertemu Ba\', dibaca samar dengung 2 harakat), Idgham Mimi/Mutamatsilain (bertemu sesama Mim, melebur dengung 2 harakat), dan Idzhar Syafawi (bertemu 26 huruf lainnya, dibaca jelas tanpa dengung, dengan peringatan khusus Asyaddu Izhhar pada Wawu dan Fa\'); 4. Hadits Terkait menegaskan bahwa menuntut ilmu adalah fardhu bagi setiap muslim (H.R. Ibnu Majah 224), dimudahkan jalan menuju surga (H.R. Muslim 2699), keutamaan orang berilmu laksana rembulan purnama di atas bintang (H.R. Abu Dawud 3641), dan ilmu bermanfaat merupakan pahala jariyah abadi (H.R. Muslim 1631); serta 5. 6 Dimensi Hikmah Keilmuan mencakup kenaikan derajat, bekal khalifah pemakmur bumi, adab toleransi majelis, integritas anti-mencontek di era AI, budaya literasi membaca, dan integrasi harmonis antara sains dengan spiritualitas iman.',
     studentActivities: [
-      'Membuat linimasa tahapan kehidupan manusia dari alam kubur hingga surga/neraka',
-      'Tadarus dan telaah makna Q.S. Al-Qari\'ah dan Q.S. Az-Zalzalah'
+      'Membaca Q.S. Al-Mujādilah: 11 dan Q.S. Az-Zumar: 9 secara tartil dan menyimak audio tilawah Syaikh Alafasy',
+      'Menghafal ayat menggunakan metode Tikrar 3x3x4 dan memanfaatkan fitur interaktif uji hafalan mandiri',
+      'Menganalisis tabel mufradat kata per kata lengkap dengan makna pelajaran akhlak',
+      'Mengklasifikasikan hukum bacaan Mim Sukun (Ikhfa Syafawi, Idgham Mimi, Idzhar Syafawi) dalam ayat pada tabel interaktif berfilter',
+      'Mempraktikkan penulisan kaligrafi khat Naskhi penggalan ayat pada buku bergaris sesuai aturan kedudukan huruf di atas dan di bawah garis',
+      'Mendiskusikan 3 studi kasus etika keilmuan era digital (mencontek menggunakan AI, adab gadget saat majelis pengajian, dan keseimbangan prestasi sains vs shalat fardhu)',
+      'Mengisi lembar muhasabah diri 8 indikator karakter pelajar pecinta ilmu dan menyelesaikan 5 kuis penalaran HOTS dengan pembahasan tuntas'
     ],
     reflectionQuestions: [
-      'Bekal apa yang paling penting untuk kamu siapkan menyongsong hari akhir?',
-      'Bagaimana keyakinan hari akhir mengubah cara pandangmu terhadap tugas dan ujian sekolah?'
+      'Bagaimana kamu mengamalkan adab tafassuh fil majalis (melapangkan ruang) baik di ruang kelas sekolah maupun di grup komunikasi digital?',
+      'Mengapa nilai akademis 100 yang diperoleh dari kecurangan mencontek/AI bertentangan dengan prinsip "Wallāhu bimā ta\'malūna khabīr"?',
+      'Bagaimana cara kamu membagi waktu antara belajar tekun untuk meraih prestasi sains/sekolah dengan menjaga shalat fardhu dan ibadah malam laksana karakter Qanit dalam Q.S. Az-Zumar: 9?'
     ]
   },
   {
@@ -854,23 +941,49 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas IX',
     semester: 'Semester 1',
     chapterNumber: 2,
-    title: 'Menggapai Rida Allah dengan Bersyukur: Akikah dan Kurban',
-    cpElement: 'Fikih',
-    mainDalil: 'Q.S. Al-Kautsar: 1-2 & Q.S. Ash-Shaffat: 102',
+    title: 'Meyakini dan Merefleksikan Iman kepada Hari Akhir',
+    cpElement: 'Akidah',
+    mainDalil: 'Q.S. Al-Hajj: 7, Q.S. Az-Zalzalah: 1-8, Q.S. Al-Qāri\'ah: 1-11, & Hadits Shahih Muslim',
+    hasFullTextbook: true,
     learningObjectives: [
-      'Menjelaskan ketentuan, hukum, dan tata cara akikah bagi bayi baru lahir',
-      'Menjelaskan ketentuan hewan dan waktu penyembelihan kurban (Iduladha dan Hari Tasyrik)',
-      'Meneladani keikhlasan Nabi Ibrahim AS dan Nabi Ismail AS'
+      'Menjelaskan pengertian beriman kepada Hari Akhir secara bahasa dan istilah syariat serta kedudukannya dalam Rukun Iman ke-5',
+      'Menganalisis dalil naqli Al-Qur\'an (Q.S. Al-Hajj: 7, Q.S. Az-Zalzalah: 1-8, Q.S. Al-Qāri\'ah: 1-11) dan hadis tanda kiamat',
+      'Mengidentifikasi dan membedakan tanda-tanda Kiamat Sugrā (Kecil) dan 10 tanda besar Kiamat Kubrā (Besar)',
+      'Menjelaskan peristiwa alam barzakh (sakaratul maut, fitnah kubur Munkar dan Nakir, nikmat dan siksa kubur, serta amalan penyelamat)',
+      'Menguraikan secara kronologis 9 tahapan Hari Akhir (Nafkhatush Sha\'iq, Nafkhatul Ba\'ats, Yaumul Ba\'ats, Yaumul Mahsyar, Syafa\'at \'Uzhma, Yaumul Hisab, Yaumul Mizan, As-Shirath, hingga Yaumul Jaza\' Surga dan Neraka)',
+      'Menghubungkan keimanan kepada Hari Akhir dengan fungsi rem moral (moral brake), pembentukan 5 dimensi karakter pelajar, dan penolakan maksiat era digital',
+      'Merefleksikan diri melalui 3 studi kasus kontemporer (flexing media sosial, cyberbullying jejak digital, jalan pintas mencontek AI), lembar muhasabah 8 dimensi, dan kuis penalaran HOTS'
     ],
-    keyTerms: ['Akikah', 'Kurban', 'Hewan Kurban', 'Hari Tasyrik', 'Keteladanan Nabi Ibrahim'],
-    summary: 'Akikah merupakan ungkapan syukur orang tua atas kelahiran buah hati dengan menyembelih kambing (2 ekor untuk anak laki-laki, 1 ekor untuk anak perempuan). Kurban adalah ibadah menyembelih hewan ternak pada tanggal 10-13 Dzulhijjah untuk mendekatkan diri kepada Allah dan berbagi daging kepada kaum dhuafa.',
+    keyTerms: [
+      'Hari Akhir (Kiamat)',
+      'Kiamat Sugra & Kubra',
+      'Alam Barzakh',
+      'Fitnah Munkar & Nakir',
+      'Tiupan Sangkakala',
+      'Yaumul Ba\'ats',
+      'Yaumul Mahsyar',
+      'Syafa\'at \'Uzhma',
+      'Yaumul Hisab',
+      'Yaumul Mizan',
+      'As-Shirath',
+      'Surga & Neraka',
+      'Moral Brake',
+      'Mazra\'atul Akhirah',
+      'Muraqabatullah'
+    ],
+    summary: 'Materi PAI Kelas IX Semester 1 Bab 2 membahas secara komprehensif akidah iman kepada Hari Akhir sebagai Rukun Iman kelima: 1. Pengertian secara bahasa ("al-Yaum al-Akhir" / hari penghabisan tanpa hari lagi) dan istilah syariat (keyakinan teguh hancurnya semesta dan dibangkitkannya manusia untuk hisab dan pembalasan abadi di surga atau neraka); 2. 10 Nama Lain Hari Akhir dalam Al-Qur\'an (Yaumul Qiyamah, Yaumul Ba\'ats, Yaumul Hisab, Yaumud Din, Yaumul Hasrah, Yaumul Fashl, Yaumul Khulud, Al-Qari\'ah, Al-Waqi\'ah, Yaumut Talaq); 3. Dalil Naqli Al-Qur\'an dan Hadits (Q.S. Al-Hajj: 7, Q.S. Az-Zalzalah: 1-8 tentang goncangan dahsyat dan keadilan seberat zarrah, Q.S. Al-Qari\'ah: 1-11 tentang laron bertebaran dan neraca Mizan, serta Hadis Riwayat Muslim No. 2901 tentang 10 tanda besar Kiamat Kubra); 4. Klasifikasi Tanda Kiamat terbagi menjadi Kiamat Sugra (kematian personal, bencana lokal, wafatnya ulama, dekadensi moral, meninggikan gedung) dan Kiamat Kubra (Dajjal, Nabi Isa AS, Ya\'juj Ma\'juj, matahari terbit dari barat, Dabbat al-Ardh, Dukhan, 3 penenggelaman bumi, dan api Aden); 5. Peristiwa Alam Barzakh mencakup sakaratul maut, fitnah pertanyaan Munkar-Nakir, nikmat dan siksa kubur, serta 5 amalan penyelamat (khususnya membaca Surah Al-Mulk); 6. Kronologi 9 Tahapan Hari Akhir dari Tiupan Sangkakala 1 pembinasaan (Az-Zumar: 68), Tiupan 2 kebangkitan, Yaumul Ba\'ats, Yaumul Mahsyar dengan matahari didekatkan 1 mil, Syafa\'at \'Uzhma Nabi Muhammad SAW, Yaumul Hisab (mulut dikunci, tangan & kaki bersaksi - Yasin: 65), Yaumul Mizan, jembatan As-Shirath, hingga Yaumul Jaza\' (Surga Firdaus, \'Adn, Na\'im vs Neraka Jahannam, Lazha, Hawiyah); 7. Hubungan dengan Akhlak berfungsi sebagai "Moral Brake" (rem moral) dan penguat integritas anti-curang, anti-cyberbullying, filantropi sosial, dan resiliensi; serta 8. Refleksi diri melalui 3 studi kasus era digital, lembar muhasabah 8 dimensi, matriks kebiasaan harian, dan kuis HOTS 5 butir soal dengan pembahasan lengkap.',
     studentActivities: [
-      'Membuat tabel perbandingan perbedaan antara akikah dan kurban',
-      'Menulis refleksi keteladanan Nabi Ismail AS yang patuh kepada perintah Allah dan orang tua'
+      'Menelaah dalil naqli Al-Qur\'an (Q.S. Al-Hajj: 7, Q.S. Az-Zalzalah: 1-8, Q.S. Al-Qari\'ah: 1-11) dan mendengarkan audio tilawah murottal Syaikh Alafasy',
+      'Mengidentifikasi dan membedakan fenomena tanda Kiamat Sugra dan 10 tanda Kiamat Kubra melalui tabel filter interaktif',
+      'Mengkaji peristiwa alam barzakh (sakaratul maut, pertanyaan kubur Munkar-Nakir) dan mempraktikkan amalan pelindung (Surah Al-Mulk & doa tasyahud)',
+      'Mempelajari visualisasi kronologis 9 tahapan akbar Hari Akhir dari Tiupan Sangkakala hingga pembalasan Surga dan Neraka',
+      'Menganalisis hubungan iman Hari Akhir sebagai Moral Brake dalam membendung kecurangan mencontek, cyberbullying, dan gaya hidup pamer (flexing)',
+      'Mengisi lembar muhasabah diri 8 indikator karakter mukmin sadar akhirat dan menyelesaikan kuis penalaran HOTS 5 butir soal dengan pembahasan tuntas'
     ],
     reflectionQuestions: [
-      'Pernahkah kamu berpartisipasi dalam panitia pembagian daging kurban di lingkunganmu?',
-      'Bagaimana caramu menerapkan nilai pengorbanan Nabi Ibrahim dalam belajar?'
+      'Bagaimana kesadaran bahwa "tangan dan kaki akan bersaksi di Yaumul Hisab" mempengaruhi caramu mengetik komentar dan status di media sosial?',
+      'Mengapa nilai 100 yang diperoleh dari hasil mencontek atau plagiarisme AI justru menjadi beban kerugian berat di hadapan Neraca Mizan?',
+      'Amalan jariyah dan kebaikan tulus apa yang sudah kamu persiapkan hari ini sebagai bekal jika malaikat maut menjemput secara tiba-tiba?'
     ]
   },
   {
@@ -878,23 +991,37 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas IX',
     semester: 'Semester 1',
     chapterNumber: 3,
-    title: 'Menata Hati dengan Berbaik Sangka (Husnuzhan) dan Menjauhi Fitnah',
+    title: 'Menerapkan Makna Cinta Lingkungan dalam Kehidupan Sehari-hari',
     cpElement: 'Akhlak',
-    mainDalil: 'Q.S. Al-Hujurat: 12 & Hadits Qudsi Shahih Bukhari',
+    mainDalil: 'Q.S. Ar-Rūm: 41, Q.S. Al-A\'rāf: 56, Q.S. Al-Baqarah: 205, & Hadits Shahih Bukhari-Muslim',
+    hasFullTextbook: true,
     learningObjectives: [
-      'Memahami macam-macam husnuzhan (kepada Allah, sesama manusia, dan diri sendiri)',
-      'Menghindari su\'uzhan (buruk sangka), ghibah, dan namimah (adu domba)',
-      'Menumbuhkan optimisme dan percaya diri dalam menghadapi ujian kelulusan'
+      'Menjelaskan pengertian cinta lingkungan (ri\'āyah al-bī\'ah) secara bahasa dan istilah syariat serta kedudukannya dalam ajaran Islam',
+      'Menganalisis dalil naqli Al-Qur\'an (Q.S. Ar-Rūm: 41, Q.S. Al-A\'rāf: 56, Q.S. Al-Baqarah: 205, Q.S. Al-Anbiyā\': 107) dan Hadits Nabi tentang kelestarian alam dan sedekah menanam pohon',
+      'Memahami pentingnya cinta lingkungan berdasarkan konsep kekhalifahan manusia (khalīfah fil ardh), keseimbangan semesta (al-mīzān), dan rahmatan lil \'ālamīn',
+      'Mendiagnosis bentuk-bentuk kerusakan lingkungan (fasād fil ardh) seperti deforestasi, sampah plastik, pencemaran air, dan polusi udara',
+      'Menerapkan ciri-ciri cinta lingkungan melalui 5 pilar aksi: kebersihan thahārah, hemat air/energi, penghijauan/reboisasi, budaya 3R, dan advokasi amar ma\'ruf lingkungan',
+      'Menghayati hikmah luhur cinta lingkungan, merefleksikan studi kasus kontemporer, dan menyelesaikan kuis penalaran HOTS'
     ],
-    keyTerms: ['Husnuzhan', 'Su\'uzhan', 'Namimah', 'Optimisme', 'Kesehatan Mental Islami'],
-    summary: 'Husnuzhan kepada Allah melahirkan optimisme bahwa setiap takdir dan cobaan pasti mengandung hikmah terbaik. Berbaik sangka kepada teman menjauhkan dari prasangka negatif dan kecurigaan yang merusak tali silaturahmi.',
+    keyTerms: [
+      'Cinta Lingkungan',
+      'Fiqh al-Bī\'ah',
+      'Khalīfah fil Ardh',
+      'Fasād fil Ardh',
+      'Al-Mīzān',
+      'Sedekah Jariyah Pohon',
+      'Anti-Isrāf',
+      'Prinsip Himā & Harīm'
+    ],
+    summary: 'Materi Bab 3 PAI Kelas IX Semester 1 membahas secara komprehensif: (1) Pengertian cinta lingkungan (ri\'āyah al-bī\'ah) dan dalil naqli (Q.S. Ar-Rūm: 41, Q.S. Al-A\'rāf: 56, Q.S. Al-Baqarah: 205, Q.S. Al-Anbiyā\': 107, serta Hadits Shahih Bukhari-Muslim tentang sedekah jariyah menanam pohon dan larangan isrāf boros air); (2) Urgensi pentingnya cinta lingkungan sebagai amanah status Khalifah fil Ardh, menjaga hukum keseimbangan semesta (Al-Mīzān), memelihara ayat kauniyah yang bertasbih, rahmatan lil \'ālamīn, serta warisan generasi mendatang (Hifẓ an-Nasl); (3) Bentuk-bentuk kerusakan lingkungan (fasād fil ardh): deforestasi, gunungan sampah plastik sekali pakai, pencemaran sungai/laut, polusi udara gas rumah kaca, dan kepunahan satwa langka beserta tinjauan dosa syariatnya; (4) Ciri-ciri mukmin pecinta lingkungan: thahārah ekologis, zuhud anti-pemborosan air dan listrik, gemar menanam pohon (greening), budaya 3R (reduce, reuse, recycle), serta pelopor teladan hijau di sekolah; dan (5) Hikmah cinta lingkungan: meraih rida Allah, mengalirkan pahala sedekah jariyah tiada henti, mencegah bencana banjir dan tanah longsor, menjaga kesehatan masyarakat, dilengkapi 3 studi kasus nyata, lembar muhasabah 8 indikator, dan kuis HOTS 5 butir soal.',
     studentActivities: [
-      'Bermain peran menanggapi prasangka buruk dengan klarifikasi santun',
-      'Menulis kata-kata afirmasi positif husnuzhan kepada diri sendiri'
+      'Menanam bibit pohon/bunga di halaman sekolah sebagai amal sedekah jariyah ekologis',
+      'Membawa tumbler dan wadah makan sendiri ke kantin sekolah untuk meminimalisasi sampah plastik sekali pakai',
+      'Praktik hemat air saat wudhu sesuai sunnah Rasulullah SAW dan mematikan lampu/kipas kelas saat tidak digunakan'
     ],
     reflectionQuestions: [
-      'Bagaimana caramu tetap berprasangka baik kepada Allah saat rencanamu belum terwujud?',
-      'Apa yang kamu lakukan untuk membangun rasa percaya diri dalam belajar?'
+      'Mengapa dalam Q.S. Ar-Rum: 41 Allah menegaskan bahwa kerusakan di darat dan di laut adalah akibat tangan manusia sendiri?',
+      'Langkah nyata apa yang sudah kamu lakukan hari ini untuk menghemat air dan mengurangi sampah plastik di sekolahmu?'
     ]
   },
   {
@@ -902,23 +1029,38 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas IX',
     semester: 'Semester 1',
     chapterNumber: 4,
-    title: 'Sejarah Masuk dan Perkembangan Islam di Nusantara',
-    cpElement: 'Sejarah Peradaban Islam (SPI)',
-    mainDalil: 'Teori Gujarat, Makkah, Persia, dan China',
+    title: 'Menerapkan Ketentuan Penyembelihan Hewan, serta Kurban dan Akikah',
+    cpElement: 'Fikih',
+    mainDalil: 'Q.S. Al-Kautsar: 1-3, Q.S. Al-An\'am: 162-163, Q.S. Al-Hajj: 34 & 37, & Hadits Shahih Muslim No. 1955',
+    hasFullTextbook: true,
     learningObjectives: [
-      'Menganalisis 4 teori masuknya Islam ke Nusantara (Makkah, Gujarat, Persia, China)',
-      'Menjelaskan jalur penyebaran Islam (perdagangan, perkawinan, pendidikan, tasawuf, dan kesenian)',
-      'Menghargai kearifan para penyebar Islam yang berdakwah tanpa kekerasan'
+      'Menjelaskan ketentuan, hakikat, dan dalil naqli penyembelihan hewan (adz-dzabh/an-nahr) sesuai tuntunan syariat Islam',
+      'Membedakan syarat penyembelih, syarat hewan yang disembelih, syarat alat penyembelih, dan rukun penyembelihan',
+      'Mengidentifikasi 4 urat saluran leher yang wajib terputus (hulqum, mari\', dan wadajain) serta adab sunnah penuh ihsan saat menyembelih',
+      'Menganalisis perbandingan komprehensif antara ibadah kurban dan akikah dari aspek hukum, waktu, jenis hewan, dan tata cara pembagian dagingnya',
+      'Mengevaluasi ketentuan keabsahan hewan kurban/akikah (kriteria musinnah/jadz\'ah, bebas 4 cacat fisik menurut Hadits Nabi)',
+      'Menghayati hikmah spiritual, sosial, dan higienitas ilmiah di balik penyembelihan hewan, kurban, dan akikah dalam kehidupan bermasyarakat modern'
     ],
-    keyTerms: ['Teori Makkah', 'Jalur Perdagangan Rempah', 'Akulturasi Budaya', 'Dakwah Damai', 'Nusantara'],
-    summary: 'Islam masuk ke Indonesia dengan cara damai tanpa pertumpahan darah melalui jalur perdagangan maritim, perkawinan, pendidikan pesantren, dan kesenian tradisional. Pendekatan kultural yang santun membuat ajaran Islam diterima dengan tangan terbuka oleh masyarakat pribumi.',
+    keyTerms: [
+      'Adz-Dzabh',
+      'An-Nahr',
+      'Udh-hiyyah (Kurban)',
+      '\'Aqīqah (Akikah)',
+      'Hulqūm & Marī\'',
+      'Al-Wadajain',
+      'Musinnah & Jadz\'ah',
+      'Ihsan Penyembelihan',
+      'Fatwa MUI Stunning'
+    ],
+    summary: 'Materi Bab 4 PAI Kelas IX Semester 1 membahas secara komprehensif: (1) Ketentuan dan dalil naqli penyembelihan hewan (Q.S. Al-Kautsar: 1-3, Q.S. Al-An\'am: 162-163, Q.S. Al-Hajj: 34 & 37, serta Hadits riwayat Muslim tentang kewajiban berlaku ihsan dan menajamkan pisau); (2) Syarat, rukun, dan tata cara penyembelihan hewan: syarat penyembelih muslim/ahli kitab berakal dan mumayyiz, syarat hewan halal yang masih hidup sempurna (hayat mustaqirrah), syarat alat tajam selain tulang/kuku/gigi, rukun penyembelihan, 4 saluran leher wajib terputus (Hulqum, Mari\', dan sepasang Al-Wadajain), sunnah adab penyembelihan menghadap kiblat dan membaringkan di sisi kiri, hal makruh/diharamkan, serta fatwa MUI tentang pemingsanan terkontrol (stunning); (3) Komparasi mendalam kurban vs akikah dari sisi hukum sunnah mu\'akkadah, waktu pelaksanaan (10-13 Dzulhijjah vs hari ke-7/14/21), jenis & umur hewan musinnah, porsi per orang (1 kambing / 7 sapi vs 2 kambing anak laki-laki & 1 kambing anak perempuan), cara pembagian daging (mentah vs matang manis), serta larangan menjual kulit atau menjadikannya upah jagal; dan (4) Hikmah luhur spiritual, sosial, dan higienitas sains medis (exsanguination maksimal), dilengkapi 3 studi kasus kontemporer, lembar muhasabah 8 indikator, dan kuis evaluasi HOTS 5 butir soal.',
     studentActivities: [
-      'Membuat peta jalur pelayaran pedagang muslim ke pelabuhan-pelabuhan Nusantara',
-      'Debat ilmiah mengenai kelebihan dan bukti masing-masing teori masuknya Islam'
+      'Menyaksikan dan menganalisis demonstrasi tata cara penyembelihan hewan halal (Juleha) dengan memperhatikan 4 saluran leher yang terputus',
+      'Membuat tabel komparasi perbedaan kurban dan akikah beserta simulasi perhitungan jumlah hewan yang dibutuhkan',
+      'Membantu kepanitiaan kurban di sekolah atau masjid dengan menerapkan adab ihsan dan kebersihan lingkungan'
     ],
     reflectionQuestions: [
-      'Mengapa dakwah dengan metode damai dan santun lebih mudah diterima masyarakat?',
-      'Bagaimana caramu merawat warisan budaya Islam di daerah Lampung/Sumatera?'
+      'Mengapa Rasulullah SAW melarang keras mengasah pisau di depan hewan yang hendak disembelih?',
+      'Bagaimana cara kamu menumbuhkan keikhlasan berkorban seperti yang dicontohkan oleh Nabi Ibrahim AS dan Nabi Ismail AS dalam kehidupan sehari-hari?'
     ]
   },
   {
@@ -926,23 +1068,38 @@ export const BUKU_PAI_DATA: BukuPaiChapter[] = [
     grade: 'Kelas IX',
     semester: 'Semester 1',
     chapterNumber: 5,
-    title: 'Meneladani Perjuangan Ulama Nusantara dan Kerajaan Islam',
+    title: 'Merefleksikan Sejarah Masuknya Islam di Indonesia',
     cpElement: 'Sejarah Peradaban Islam (SPI)',
-    mainDalil: 'Wali Songo, Kesultanan Demak, Aceh Darussalam, dan Samudera Pasai',
+    mainDalil: 'Q.S. An-Nahl: 125, Q.S. Al-Hujurat: 13, Q.S. Ali \'Imran: 159, & Hadits Riwayat Bukhari No. 3461',
+    hasFullTextbook: true,
     learningObjectives: [
-      'Meneladani strategi dakwah Wali Songo di Tanah Jawa',
-      'Menganalisis peranan kerajaan Islam (Samudera Pasai, Aceh, Demak, Mataram, Banten, Gowa-Tallo, Ternate-Tidore)',
-      'Menumbuhkan jiwa patriotisme dan nasionalisme membela tanah air'
+      'Menganalisis 4 teori masuknya Islam ke Indonesia (Teori Makkah, Gujarat, Persia, dan China) beserta tokoh pendukung, kurun waktu, dan bukti historis-arkeologisnya',
+      'Menguraikan 6 jalur penyebaran Islam di kepulauan Nusantara (perdagangan, perkawinan, pendidikan pesantren, tasawuf, kesenian/akulturasi, dan politik kekuasaan)',
+      'Mengidentifikasi peranan kerajaan-kerajaan Islam perintis (Samudera Pasai, Kesultanan Demak Bintoro, dan Aceh Darussalam) dalam transformasi dakwah',
+      'Menganalisis dalil naqli Al-Qur\'an dan Hadits tentang metode dakwah damai penuh hikmah (bilā \'unfin) dan kesetaraan derajat manusia',
+      'Merefleksikan 5 dimensi hikmah mempelajari sejarah masuknya Islam bagi pembentukan karakter toleransi, literasi kritis, persatuan bangsa, dan kearifan kultural di era digital'
     ],
-    keyTerms: ['Wali Songo', 'Sunan Kalijaga', 'Samudera Pasai', 'Kesultanan Demak', 'Jihad Bela Negeri'],
-    summary: 'Ulama Wali Songo dan raja-raja muslim Nusantara memainkan peran ganda: menyebarkan tauhid serta memimpin perjuangan mengusir penjajah bangsa asing. Kesenian seperti gamelan, tembang, dan wayang disisipi nilai-nilai Islam sebagai media pembelajaran rakyat.',
+    keyTerms: [
+      'Teori Makkah',
+      'Teori Gujarat',
+      'Teori Persia',
+      'Teori China',
+      'Dakwah Bilā \'Unfin',
+      'Jalur Perdagangan',
+      'Pondok Pesantren',
+      'Akulturasi Budaya',
+      'Jimat Kalimasada',
+      'Tasamuh & Al-\'Urf'
+    ],
+    summary: 'Materi Bab 5 PAI Kelas IX Semester 1 membahas secara komprehensif: (1) 4 Teori masuknya Islam ke Indonesia: Teori Makkah (abad ke-7 M / 1 H oleh Buya Hamka & T.W. Arnold dengan bukti makam Barus 672 M, catatan Dinasti Tang 674 M, mazhab Syafi\'i, dan gelar Al-Malik); Teori Gujarat (abad ke-13 M oleh Snouck Hurgronje dengan bukti nisan pualam Cambay Sultan Malik As-Saleh 1297 M); Teori Persia (abad ke-13 M oleh Hoesein Djajadiningrat dengan bukti tradisi Tabot/Tabuik 10 Muharram dan istilah baris Jabar-Je-er-Pe-es); dan Teori China (abad ke-9/15 M oleh Slamet Muljana dengan bukti kronik Sampo Kong Semarang dan ekspedisi armada damai Laksamana Cheng Ho); (2) 6 Jalur penyebaran Islam di Indonesia yang berlangsung damai tanpa kekerasan (bilā \'unfin): jalur perdagangan maritim, perkawinan bangsawan/pribumi, pendidikan pesantren (Ampeldenta & Giri), tasawuf spiritual pembersihan jiwa, kesenian akulturatif (wayang kulit Jimat Kalimasada, gamelan Sekaten, tembang Ilir-Ilir Sunan Kalijaga), dan politik kekuasaan kesultanan; serta (3) 5 Hikmah luhur mempelajari sejarah masuknya Islam: meneladani karakter dakwah sejuk, menumbuhkan toleransi kultural (tasamuh), etos kerja gigih para musafir, memperkokoh integrasi persatuan bangsa, dilengkapi 3 studi kasus kontemporer, lembar muhasabah 8 indikator, dan kuis penalaran HOTS 5 butir soal.',
     studentActivities: [
-      'Membuat kliping biografi 9 tokoh Wali Songo beserta metode dakwahnya',
-      'Menyanyikan dan mendalami makna lirik tembang Ilir-Ilir ciptaan Sunan Kalijaga'
+      'Membuat peta jalur pelayaran masuknya Islam ke kepulauan Nusantara berdasarkan 4 teori besar',
+      'Menganalisis nilai-nilai tauhid dan pesan moral dalam tembang Ilir-Ilir ciptaan Sunan Kalijaga',
+      'Melakukan wawancara atau riset mandiri mengenai peninggalan bersejarah Islam (masjid kuno/makam ulama) di daerah masing-masing'
     ],
     reflectionQuestions: [
-      'Karakter apa dari Sunan Kalijaga yang paling menginspirasimu dalam berkarya?',
-      'Bagaimana hubungan antara keimanan dengan rasa cinta tanah air (hubbul wathan minal iman)?'
+      'Mengapa para pendakwah Islam di Nusantara lebih memilih jalan akulturasi damai daripada memaksakan kehendak dengan kekerasan?',
+      'Bagaimana cara kamu meneladani kejujuran para pedagang muslim perintis dalam kehidupan bersekolah sehari-hari?'
     ]
   },
   {

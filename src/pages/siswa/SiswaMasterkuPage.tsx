@@ -49,6 +49,13 @@ import { BukuPaiKelas8Sem1Bab5Detail } from '../../components/masterku/BukuPaiKe
 import { BukuPaiKelas8Sem2Bab6Detail } from '../../components/masterku/BukuPaiKelas8Sem2Bab6Detail';
 import { BukuPaiKelas8Sem2Bab7Detail } from '../../components/masterku/BukuPaiKelas8Sem2Bab7Detail';
 import { BukuPaiKelas8Sem2Bab8Detail } from '../../components/masterku/BukuPaiKelas8Sem2Bab8Detail';
+import { BukuPaiKelas8Sem2Bab9Detail } from '../../components/masterku/BukuPaiKelas8Sem2Bab9Detail';
+import { BukuPaiKelas8Sem2Bab10Detail } from '../../components/masterku/BukuPaiKelas8Sem2Bab10Detail';
+import { BukuPaiKelas9Sem1Bab1Detail } from '../../components/masterku/BukuPaiKelas9Sem1Bab1Detail';
+import { BukuPaiKelas9Sem1Bab2Detail } from '../../components/masterku/BukuPaiKelas9Sem1Bab2Detail';
+import { BukuPaiKelas9Sem1Bab3Detail } from '../../components/masterku/BukuPaiKelas9Sem1Bab3Detail';
+import { BukuPaiKelas9Sem1Bab4Detail } from '../../components/masterku/BukuPaiKelas9Sem1Bab4Detail';
+import { BukuPaiKelas9Sem1Bab5Detail } from '../../components/masterku/BukuPaiKelas9Sem1Bab5Detail';
 import { useToast } from '../../components/common/Toast';
 
 type TabType = 'quran' | 'hadits' | 'buku' | 'nabi' | 'teladan';
@@ -70,7 +77,7 @@ export const SiswaMasterkuPage: React.FC = () => {
   // ==================== BUKU PAI STATE ====================
   const [selectedBukuGrade, setSelectedBukuGrade] = useState<'Semua' | 'Kelas VII' | 'Kelas VIII' | 'Kelas IX'>('Kelas VIII');
   const [selectedBukuElement, setSelectedBukuElement] = useState<string>('Semua');
-  const [expandedChapterId, setExpandedChapterId] = useState<string | null>('k8-bab8');
+  const [expandedChapterId, setExpandedChapterId] = useState<string | null>('k8-bab10');
   const [showKelas7Sem1Detail, setShowKelas7Sem1Detail] = useState<boolean>(true);
   const [selectedTextbookChapter, setSelectedTextbookChapter] = useState<
     | 'k7-bab1'
@@ -91,7 +98,14 @@ export const SiswaMasterkuPage: React.FC = () => {
     | 'k8-bab6'
     | 'k8-bab7'
     | 'k8-bab8'
-  >('k8-bab8');
+    | 'k8-bab9'
+    | 'k8-bab10'
+    | 'k9-bab1'
+    | 'k9-bab2'
+    | 'k9-bab3'
+    | 'k9-bab4'
+    | 'k9-bab5'
+  >('k9-bab5');
 
   // ==================== SEJARAH NABI STATE ====================
   const [selectedNabiOrder, setSelectedNabiOrder] = useState<number>(1);
@@ -224,8 +238,440 @@ export const SiswaMasterkuPage: React.FC = () => {
       let response = '';
       const q = promptText.toLowerCase();
 
-      // ==================== KELAS 8 SEMESTER 1 BAB 1: TOLERANSI Q.S. AL-HUJURAT: 13 & Q.S. AL-BAQARAH: 256 ====================
+      // ==================== KELAS 9 SEMESTER 1 BAB 5: SEJARAH MASUKNYA ISLAM DI INDONESIA ====================
       if (
+        ((q.includes('kelas 9') || q.includes('kelas ix')) && (q.includes('bab 5') || q.includes('sejarah masuknya islam') || q.includes('teori masuk') || q.includes('wali songo') || q.includes('samudera pasai'))) ||
+        q.includes('sejarah masuknya islam') ||
+        q.includes('teori makkah') ||
+        q.includes('teori arab') ||
+        q.includes('teori gujarat') ||
+        q.includes('teori persia') ||
+        q.includes('teori china') ||
+        q.includes('teori tiongkok') ||
+        q.includes('jalur masuk islam') ||
+        q.includes('jalur penyebaran islam') ||
+        q.includes('hikmah sejarah islam') ||
+        q.includes('buya hamka') ||
+        q.includes('snouck hurgronje') ||
+        q.includes('samudera pasai') ||
+        q.includes('malik as-saleh') ||
+        q.includes('kesultanan demak') ||
+        q.includes('sunan kalijaga') ||
+        q.includes('jimat kalimasada') ||
+        q.includes('tabot') ||
+        q.includes('tabuik') ||
+        q.includes('bila \'unfin') ||
+        q.includes('barus')
+      ) {
+        response = `📚 **Rangkuman Modul Lengkap PAI Kelas IX Semester 1 Bab 5: Merefleksikan Sejarah Masuknya Islam di Indonesia**
+
+---
+
+### 1. 4 Teori Masuknya Islam ke Indonesia
+1. **Teori Makkah (Arab)**:
+   - **Tokoh Pendukung**: Prof. Dr. Buya Hamka, Sir Thomas Walker Arnold (T.W. Arnold), Anthony H. Johns, J.C. van Leur.
+   - **Waktu Kedatangan**: Abad ke-7 Masehi (Abad ke-1 Hijriah) sejak masa Khulafaur Rasyidin & Dinasti Umayyah.
+   - **Bukti Historis**: Catatan Dinasti Tang (Tiongkok) tentang perkampungan saudagar Arab (*Ta-Shih*) di pantai barat Sumatera (Barus/Fansur) tahun 674 M; makam Mahligai Barus bertarikh 672 M / 48 H; kesamaan mazhab mayoritas Syafi'i di Nusantara dengan Makkah & Mesir; dan gelar raja "Al-Malik" di Samudera Pasai.
+   - **Status Historiografi**: Menjelaskan **Fase Inisiasi Kedatangan Pertama**.
+
+2. **Teori Gujarat (India)**:
+   - **Tokoh Pendukung**: J. Pijnapel, Christian Snouck Hurgronje, J.P. Moquette.
+   - **Waktu Kedatangan**: Abad ke-13 Masehi.
+   - **Bukti Historis**: Batu nisan marmer pualam Sultan Malik As-Saleh (1297 M) di Samudera Pasai & nisan Maulana Malik Ibrahim di Gresik yang berukiran khas Cambay, Gujarat, India; catatan Marco Polo (1292 M) di Perlak.
+   - **Status Historiografi**: Menjelaskan **Fase Akselerasi Perdagangan Maritim**.
+
+3. **Teori Persia (Iran)**:
+   - **Tokoh Pendukung**: Prof. Dr. P.A. Hoesein Djajadiningrat, Umar Amir Husen.
+   - **Waktu Kedatangan**: Abad ke-13 Masehi.
+   - **Bukti Historis**: Tradisi peringatan 10 Muharram (*Tabot* di Bengkulu & *Tabuik* di Pariaman); ejaan aksara harakat tradisional Arab-Melayu (Jabar, Je-er, Pe-es); kosa kata serapan seperti *Syahbandar*, *Nakhoda*, *Bedil*, *Jubah*; dan kesamaan corak sastra mistik tasawuf wujudiyyah.
+   - **Status Historiografi**: Menjelaskan **Fase Transmisi Kultural & Bahasa**.
+
+4. **Teori China (Tiongkok)**:
+   - **Tokoh Pendukung**: Prof. Dr. Slamet Muljana, H.J. de Graaf, Denys Lombard.
+   - **Waktu Kedatangan**: Abad ke-9 & 15 Masehi.
+   - **Bukti Historis**: Kronik Klenteng Sampo Kong Semarang (menyebut Raden Patah sebagai Jin Bun); ekspedisi armada damai Laksamana Cheng Ho (1405-1433 M); catatan musafir Ma Huan dalam kitab *Yingya Shenglan*; dan arsitektur masjid atap tumpang bertingkat mirip kelenteng.
+   - **Status Historiografi**: Menjelaskan **Fase Diplomasi & Transisi Keraton Demak**.
+
+---
+
+### 2. 6 Jalur Transmisi Penyebaran Islam di Indonesia
+- **1. Jalur Perdagangan (*At-Tijārah*)**: Memanfaatkan angin muson di Selat Malaka & pesisir Jawa. Pedagang muslim berakhlak jujur, tidak curang dalam timbangan, santun, dan mendirikan pemukiman Pekojan.
+- **2. Jalur Perkawinan (*Al-Munākaḥah*)**: Saudagar muslim kaya menikahi putri para adipati/bangsawan pribumi setelah bersyahadat (contoh: Maulana Ishak dengan Dewi Sekardadu, Sunan Ampel dengan Nyai Ageng Manila), sehingga keluarga istana dan rakyat jelata ikut memeluk Islam.
+- **3. Jalur Pendidikan Pesantren (*At-Tarbiyah*)**: Pendirian pesantren asrama (Pesantren Ampeldenta & Giri Kedaton). Para santri dari pelosok Nusantara (Maluku, Hitu, Madura, Kalimantan) belajar agama lalu kembali mendakwahkan Islam ke daerah asal.
+- **4. Jalur Tasawuf & Spiritualitas**: Pendekatan kebatinan pembersihan jiwa (*tazkiyatun nafs*) yang cocok dengan masyarakat Nusantara, dipelopori Syekh Hamzah Fansuri, Syamsuddin As-Sumatrani, Abdur Rauf As-Singkili, dan Sunan Bonang.
+- **5. Jalur Kesenian & Kebudayaan**: Akulturasi kreatif para Wali Songo: wayang kulit purwa dengan Jimat Kalimasada (Dua Kalimat Syahadat) dan tembang Ilir-Ilir oleh Sunan Kalijaga; gamelan Bonang & Tombo Ati oleh Sunan Bonang; menara masjid Kudus mirip candi oleh Sunan Kudus.
+- **6. Jalur Politik & Kesultanan**: Pengaruh raja/sultan mempermudah rakyat jelata mengikutinya secara suka rela (*sendiko dawuh*), misal Samudera Pasai, Kesultanan Demak Bintoro, Banten, Cirebon, Gowa-Tallo, dan Ternate-Tidore.
+
+---
+
+### 3. Hikmah Mempelajari Sejarah Masuknya Islam ke Indonesia
+1. **Menghayati Karakter Dakwah Damai (*Bilā 'Unfin*)**: Meneladani Q.S. An-Nahl: 125 bahwa Islam disebarkan dengan hikmah, nasihat sejuk, dan budi pekerti luhur tanpa pertumpahan darah atau invasi militer.
+2. **Menumbuhkan Toleransi Kultural (*Tasamuh*)**: Menghargai keberagaman suku, bahasa, dan adat istiadat (*al-'urf*) selagi tidak bertentangan dengan pokok akidah.
+3. **Meneladani Etos Kerja & Resiliensi**: Kegigihan para mubaligh dan pedagang muslim mengarungi samudra luas demi mengemban amanah risalah tauhid.
+4. **Memperkokoh Persatuan Bangsa**: Ajaran Islam yang egaliter (menghapus kasta kaku) menjadi perekat utama lahirnya persaudaraan kebangsaan (*ukhuwah wathaniyah*).
+5. **Melestarikan Warisan Intelektual & Cagar Budaya**: Menjaga karya sastra ulama, masjid bersejarah, dan peninggalan peradaban Islam Nusantara dari kepunahan.`;
+      } else if (
+        ((q.includes('kelas 9') || q.includes('kelas ix')) && (q.includes('bab 4') || q.includes('penyembelihan') || q.includes('kurban') || q.includes('akikah') || q.includes('aqiqah'))) ||
+        q.includes('penyembelihan hewan') ||
+        q.includes('kurban') ||
+        q.includes('qurban') ||
+        q.includes('akikah') ||
+        q.includes('aqiqah') ||
+        q.includes('adz-dzabh') ||
+        q.includes('an-nahr') ||
+        q.includes('udh-hiyyah') ||
+        q.includes('al-kautsar') ||
+        q.includes('hulqum') ||
+        q.includes('mari\'') ||
+        q.includes('wadajain') ||
+        q.includes('musinnah') ||
+        q.includes('jadz\'ah') ||
+        q.includes('urat leher') ||
+        q.includes('syarat kurban') ||
+        q.includes('syarat akikah') ||
+        q.includes('upah jagal') ||
+        q.includes('stunning')
+      ) {
+        response = `📚 **Rangkuman Modul Lengkap PAI Kelas IX Semester 1 Bab 4: Menerapkan Ketentuan Penyembelihan Hewan, serta Kurban dan Akikah**
+
+---
+
+### 1. Ketentuan Penyembelihan Hewan, Kurban, & Akikah
+- **Pengertian Bahasa & Syariat:**
+  - **Penyembelihan (*Adz-Dzabh / An-Nahr*):** Memotong jalan pernapasan, saluran makanan, dan dua urat leher hewan ternak halal dengan alat tajam selain tulang/kuku/gigi, diiringi niat karena Allah (*tasmiyah*).
+  - **Kurban (*Udh-hiyyah*):** Menyembelih hewan ternak (*bahīmatul an'ām*) pada hari Idul Adha (10 Dzulhijjah) dan hari Tasyrik (11, 12, 13 Dzulhijjah) dengan niat mendekatkan diri (*taqarrub*) kepada Allah Swt.
+  - **Akikah (*'Aqīqah*):** Menyembelih kambing/domba sebagai tebusan kelahiran anak dan wujud syukur orang tua kepada Allah, sunnah pada hari ke-7, 14, atau 21 setelah kelahiran bayi.
+- **Dalil Naqli Pokok:**
+  - **Q.S. Al-Kautsar [108]: 1-3:** Perintah mendirikan shalat dan menyembelih kurban (*fa ṣalli lirabbika wanḥar*) sebagai rasa syukur atas nikmat berlimpah.
+  - **Q.S. Al-An'ām [6]: 162-163:** Ibadah sembelihan (*nusukī*), hidup, dan mati semata-mata lillāhi Rabbil 'ālamīn, bukan untuk sesajen atau makhluk halus.
+  - **Q.S. Al-Hajj [22]: 34 & 37:** Hewan ternak adalah karunia Allah; bukan darah atau dagingnya yang sampai kepada Allah, melainkan ketakwaan hati pelakunya.
+  - **HR. Muslim No. 1955:** Kewajiban berlaku *ihsān* dalam segala hal: menajamkan mata pisau dan menenangkan hewan yang disembelih.
+  - **HR. At-Tirmidzi No. 1522 & Abu Dawud No. 2838:** *"Setiap anak tergadai dengan akikahnya, disembelihkan untuknya pada hari ketujuh, dicukur rambut kepalanya, dan diberi nama."*
+
+---
+
+### 2. Syarat, Rukun, & 4 Urat Leher Wajib Terputus
+- **4 Rukun Penyembelihan:**
+  1. **Penyembelih (*Adz-Dzābiḥ*):** Muslim/Ahli Kitab, berakal sehat, *mumayyiz*, dan berniat menyembelih karena Allah.
+  2. **Hewan yang Disembelih (*Al-Mażbūḥ*):** Halal dimakan, masih hidup sempurna (*ḥayāt mustaqirrah*), bukan bangkai sebelum disembelih.
+  3. **Alat Penyembelih (*Al-Ālah*):** Sangat tajam dari besi/baja/batu. Dilarang keras memakai tulang (*al-'aẓm*) dan kuku/gigi (*aẓ-ẓufr*).
+  4. **Tasmiyah:** Membaca minimal *"Bismillāh"*, lebih sempurna *"Bismillāhi Allāhu Akbar"*.
+- **4 Urat Saluran Leher yang Wajib Terputus:**
+  1. **Hulqūm (الحُلقوم):** Saluran pernapasan (*trachea*).
+  2. **Marī' (المَرِيء):** Saluran pencernaan / makanan (*esophagus*).
+  3. & 4. **Al-Wadajain (الوَدَجَان):** Sepasang pembuluh darah leher utama (*arteri karotis* dan *vena jugularis*).
+- **Sunnah & Adab Ihsan:** Membaringkan hewan di atas lambung kiri menghadap kiblat, menajamkan pisau di tempat tertutup dari hewan, memperlakukan hewan dengan lembut, dan membiarkan hewan mati total sebelum dikuliti.
+- **Hal yang Dimakruhkan/Diharamkan:** Mengasah pisau di depan hewan, menyembelih di hadapan hewan lain, menyeret hewan dengan kasar, dan memotong kaki/menguliti saat hewan masih bergerak.
+- **Fatwa MUI No. 12 Tahun 2009:** Pemingsanan terkontrol (*stunning*) diperbolehkan asalkan hewan hanya pingsan sementara, tidak mati, dan jantung tetap memompa darah keluar secara tuntas.
+
+---
+
+### 3. Komparasi Mendalam: Kurban vs Akikah
+- **Waktu:** Kurban hanya 4 hari (10-13 Dzulhijjah); Akikah utama hari ke-7 (bisa hari ke-14, 21, atau sebelum baligh).
+- **Jenis & Porsi:**
+  - Kurban: 1 kambing untuk 1 orang (bisa pahala sekeluarga); 1 sapi/unta untuk patungan 7 orang.
+  - Akikah: Anak laki-laki disunnahkan 2 ekor kambing sepadan; anak perempuan 1 ekor kambing.
+- **Syarat Umur Hewan (*Musinnah*):** Unta min 5 th; Sapi min 2 th; Kambing Jawa min 1 th; Domba *jadz'ah* min 6 bln - 1 th (berganti gigi seri).
+- **Bebas 4 Cacat:** Tidak buta sebelah yang jelas, tidak sakit parah yang jelas, tidak pincang yang jelas, dan tidak sangat kurus tak bersumsum (HR. Abu Dawud No. 2802).
+- **Pembagian Daging:** Kurban sunnah dibagikan dalam kondisi **MENTAH** (1/3 shohibul qurban, 1/3 kerabat/tetangga, 1/3 fakir miskin); Akikah sunnah dibagikan dalam kondisi **SUDAH DIMASAK MATANG MANIS**.
+- **Larangan Upah Jagal:** HARAM menjual kulit/daging kurban atau menjadikannya upah bagi jagal (HR. Bukhari & Muslim dari Ali bin Abi Thalib r.a.).
+
+---
+
+### 4. Hikmah Spiritual, Sosial, & Higienitas Sains Medis
+- **Spiritual:** Meneladani ketundukan Nabi Ibrahim AS dan Ismail AS, mensucikan jiwa dari sifat hewani dan kikir, serta kendaraan di akhirat.
+- **Sosial:** Pemerataan asupan gizi hewani bagi kaum dhuafa dan mempererat silaturahmi.
+- **Sains Medis:** Pemotongan 4 urat saluran leher saat jantung memompa memicu *exsanguination* (darah keluar tuntas 80-90%), mencegah kontaminasi bakteri darah, meminimalisasi hormon stres, serta membuat daging empuk, higienis, dan tahan lama.`;
+      } else // ==================== KELAS 9 SEMESTER 1 BAB 3: MENERAPKAN MAKNA CINTA LINGKUNGAN ====================
+      if (
+        ((q.includes('kelas 9') || q.includes('kelas ix')) && (q.includes('bab 3') || q.includes('lingkungan') || q.includes('alam'))) ||
+        q.includes('cinta lingkungan') ||
+        q.includes('merawat lingkungan') ||
+        q.includes('fasad fil ardh') ||
+        q.includes('fasad fil ard') ||
+        q.includes('kerusakan lingkungan') ||
+        q.includes('khalifah fil ardh') ||
+        q.includes('fiqh al-bi\'ah') ||
+        q.includes('al-bi\'ah') ||
+        q.includes('al-mizan') ||
+        q.includes('ar-rum: 41') ||
+        q.includes('ar-rum 41') ||
+        q.includes('al-araf: 56') ||
+        q.includes('al-araf 56') ||
+        q.includes('al-baqarah: 205') ||
+        q.includes('al-baqarah 205') ||
+        q.includes('menanam pohon') ||
+        q.includes('boros air') ||
+        q.includes('israf air') ||
+        q.includes('hima') ||
+        q.includes('harim')
+      ) {
+        response = `Assalamu'alaikum Warahmatullahi Wabarakatuh! 🌿
+
+Berikut adalah rangkuman materi lengkap buku pelajaran PAI & Budi Pekerti SMP Kelas IX Semester 1 Bab 3: **"Menerapkan Makna Cinta Lingkungan dalam Kehidupan Sehari-hari"** sesuai kurikulum resmi:
+
+---
+
+### 1. Pengertian & Dalil Naqli Cinta Lingkungan
+• **Pengertian Bahasa & Istilah:**
+  - *Bahasa:* Berasal dari kata *Al-Bī'ah* (tempat tinggal/ruang kehidupan makhluk) dan *Ar-Ri'āyah/Al-Mahabbah* (pemeliharaan, penjagaan, dan kasih sayang).
+  - *Istilah Syariat:* Kesadaran iman dan komitmen moral seorang muslim untuk merawat, menjaga kebersihan, memelihara kelestarian ekosistem alam (tanah, air, udara, flora, fauna), serta mencegah perusakan (*fasād*) di bumi sebagai wujud syukur dan penunaian amanah kekhalifahan.
+  - *Kedudukan:* Bagian dari *Maqāṣid asy-Syarī'ah* (memelihara jiwa/*hifẓ an-nafs* dan memelihara keturunan/*hifẓ an-nasl*).
+
+• **Dalil Naqli Al-Qur'an:**
+  1. **Q.S. Ar-Rūm [30]: 41:**
+     *«ظَهَرَ ٱلْفَسَادُ فِى ٱلْبَرِّ وَٱلْبَحْرِ بِمَا كَسَبَتْ أَيْدِى ٱلنَّاسِ...»*
+     Telah tampak kerusakan di darat dan di laut akibat perbuatan tangan manusia, agar mereka merasakan sebagian dampaknya dan kembali ke jalan yang benar.
+  2. **Q.S. Al-A'rāf [7]: 56:**
+     *«وَلَا تُفْسِدُوا۟ فِى ٱلْأَرْضِ بَعْدَ إِصْلَٰحِهَا...»*
+     Larangan berbuat kerusakan di bumi setelah diciptakan dengan baik. Rahmat Allah sangat dekat bagi orang yang berbuat kebaikan (*Al-Muḥsinīn*).
+  3. **Q.S. Al-Baqarah [2]: 205:**
+     Allah mengecam orang munafik yang merusak tanaman (*al-ḥarṡ*) dan keturunan (*an-nasl*). Allah tidak menyukai kerusakan (*fasād*).
+  4. **Q.S. Al-Anbiyā' [21]: 107:**
+     Misi kerasulan Nabi Muhammad SAW adalah rahmat bagi seluruh alam (*rahmatan lil 'ālamīn*), termasuk alam fauna dan flora.
+
+• **Dalil Hadits Shahih:**
+  1. **HR. Bukhari No. 2320 & Muslim No. 1552:** Menanam pohon bernilai sedekah jariyah selama buah atau daunnya dimakan manusia, burung, atau hewan.
+  2. **HR. Ahmad No. 12902 & Al-Adab al-Mufrad No. 479:** Perintah menanam bibit pohon meskipun kiamat sedang terjadi di depan mata.
+  3. **HR. Ibnu Majah No. 425:** Larangan *isrāf* (pemborosan) dalam menggunakan air wudhu meskipun di tepi sungai mengalir deras.
+  4. **HR. Muslim No. 35:** Menyingkirkan gangguan/sampah dari jalan adalah cabang keimanan.
+  5. **HR. Abu Dawud No. 26:** Larangan mengotori sumber air mengalir, jalan umum, dan tempat berteduh publik.
+
+---
+
+### 2. Pentingnya Cinta Lingkungan dalam Islam
+1. **Amanah Khalīfah fil Ardh:** Manusia diciptakan sebagai pemakmur bumi (*isti'mār al-ardh* - Q.S. Hud: 61), bukan penindas atau perusak.
+2. **Menjaga Keseimbangan Semesta (*Al-Mīzān*):** Alam semesta diciptakan dengan takaran kesetimbangan presisi (Q.S. Ar-Rahman: 7-9).
+3. **Alam Bertasbih kepada Allah:** Seluruh pepohonan, gunung, dan burung senantiasa bertasbih menyucikan Allah (Q.S. Al-Isrā': 44).
+4. **Kearifan Konservasi Islam Kuno:** 
+   - *Himā:* Cagar alam/hutan lindung yang diproteksi negara dari eksploitasi.
+   - *Harīm:* Zona penyangga di sekitar mata air dan sungai yang dilarang didirikan bangunan.
+   - *Ihyā' al-Mawāt:* Menghidupkan dan menghijaukan lahan tidur yang tandus.
+
+---
+
+### 3. Bentuk-Bentuk Kerusakan Lingkungan (Fasād fil Ardh)
+• **Daratan:** Deforestasi (penebangan liar memicu longsor dan banjir) & gunungan sampah plastik sekali pakai (meracuni tanah dan mikroplastik).
+• **Perairan:** Pencemaran sungai dan laut oleh limbah industri/domestik serta racun ikan yang mematikan biota karang.
+• **Udara:** Polusi emisi gas buang kendaraan, asap pabrik batu bara, dan pembakaran sampah pemicu ISPA serta krisis iklim (*climate change*).
+• **Hayati:** Perburuan liar satwa langka yang memutus rantai makanan ekosistem.
+
+---
+
+### 4. Ciri-Ciri Mukmin Pecinta Lingkungan (5 Pilar Aksi)
+1. **Thahārah Ekologis:** Menjaga kebersihan diri, kelas, rumah, masjid, dan ruang publik (*Ath-Thahūru syatrul īmān*).
+2. **Anti-Pemborosan (Zuhud & Anti-Isrāf):** Hemat air saat wudhu, matikan kran bocor, matikan lampu/kipas kelas yang tidak terpakai.
+3. **Gemar Menanam (Greening):** Menanam bibit pohon peneduh, merawat tanaman hias di sekolah, menabur benih tanaman obat.
+4. **Budaya 3R (Reduce, Reuse, Recycle):** Membawa tumbler dan kotak bekal pribadi, memilah sampah organik dan anorganik.
+5. **Advokasi Hijau & Amar Ma'ruf Lingkungan:** Mengingatkan teman yang membuang sampah sembarangan secara santun dan aktif di kader Adiwiyata sekolah.
+
+---
+
+### 5. Hikmah Luhur Cinta Lingkungan
+1. Meraih cinta dan rida Allah Swt. sebagai golongan *Al-Muḥsinīn*.
+2. Mengalirkan pahala sedekah jariyah abadi dari pohon dan air yang dimanfaatkan.
+3. Menyelamatkan masyarakat dari ancaman banjir bandang, kekeringan, dan wabah penyakit.
+4. Menjaga keberlanjutan hidup dan kesehatan anak cucu generasi masa depan (*Hifẓ an-Nasl*).
+5. Menghadirkan ketenangan jiwa melalui tadabbur keindahan ciptaan Allah di alam terbuka.
+
+Apakah ada bab spesifik, dalil, atau latihan soal kuis HOTS yang ingin kamu bahas lebih dalam bersama Masterku AI? 🌱`;
+      }
+
+      // ==================== KELAS 9 SEMESTER 1 BAB 2: MEYAKINI DAN MEREFLEKSIKAN IMAN KEPADA HARI AKHIR ====================
+      else if (
+        ((q.includes('kelas 9') || q.includes('kelas ix')) && (q.includes('bab 2') || q.includes('hari akhir') || q.includes('kiamat') || q.includes('akhirat'))) ||
+        q.includes('hari akhir') ||
+        q.includes('iman kepada hari akhir') ||
+        q.includes('kiamat sugra') ||
+        q.includes('kiamat kubra') ||
+        q.includes('yaumul ba\'ats') ||
+        q.includes('yaumul mahsyar') ||
+        q.includes('yaumul hisab') ||
+        q.includes('yaumul mizan') ||
+        q.includes('barzakh') ||
+        q.includes('munkar nakir') ||
+        q.includes('siksa kubur') ||
+        q.includes('moral brake') ||
+        q.includes('az-zalzalah') ||
+        q.includes('al-hajj: 7') ||
+        q.includes('al-qari\'ah')
+      ) {
+        response = `Assalamu'alaikum Warahmatullahi Wabarakatuh! 🌸
+
+Berikut adalah penjelasan komprehensif materi PAI & Budi Pekerti SMP Kelas IX Semester 1 Bab 2: **"Meyakini dan Merefleksikan Iman kepada Hari Akhir"** sesuai silabus Kurikulum Merdeka:
+
+---
+
+### 1. Pengertian, Dalil, Tanda Kiamat, dan Peristiwa Pasca Kematian
+- **Pengertian Bahasa & Istilah:**
+  - Secara bahasa: *Al-Yaum al-Akhir* berarti hari penghabisan karena tidak ada hari lagi setelahnya.
+  - Secara istilah syariat: Keyakinan teguh di dalam hati, diikrarkan dengan lisan, dan dibuktikan dengan amal perbuatan bahwa seluruh alam semesta beserta isinya akan hancur lebur binasa, kemudian manusia dibangkitkan dari kubur untuk mempertanggungjawabkan amalnya di hadapan Allah Swt.
+  - Kedudukan: **Rukun Iman ke-5** dengan hukum **Fardhu 'Ain** bagi setiap mukmin.
+- **Dalil Naqli Utama:**
+  - *Q.S. Al-Hajj: 7:* Kepastian datangnya kiamat tanpa keraguan dan Allah akan membangkitkan semua yang ada di dalam kubur.
+  - *Q.S. Az-Zalzalah: 1-8:* Goncangan mahadahsyat bumi, bumi mengeluarkan beban beratnya, dan keadilan perhitungan amal seberat partikel *zarrah* (kebaikan maupun keburukan akan dibalas).
+  - *Q.S. Al-Qari'ah: 1-11:* Manusia bagaikan anai-anai (laron) berhamburan, gunung-gunung dihamburkan laksana bulu dibusur, serta timbangan amal (*Mawāzīnuh*).
+  - *Hadits Shahih Muslim (No. 2901):* Rasulullah saw. menegaskan 10 tanda besar kiamat kubra.
+- **Klasifikasi Tanda-Tanda Kiamat:**
+  - **Kiamat Sugra (Kecil):** Kematian individu manusia (*Al-Maut*), bencana alam lokal, merebaknya kebodohan agama, merebaknya perzinahan/transaksi riba, hilangnya amanah kepemimpinan, dan orang miskin berlomba mendirikan gedung pencakar langit.
+  - **Kiamat Kubra (Besar - 10 Tanda):** Kemunculan Dajjal, turunnya Nabi Isa AS, keluarnya Ya'juj dan Ma'juj, matahari terbit dari ufuk barat (pintu taubat tertutup), keluarnya Dabbatul Ardh (hewan melata), kabut tebal Ad-Dukhan, 3 peristiwa penenggelaman bumi (timur, barat, jazirah arab), dan api besar dari Yaman menggiring manusia ke Mahsyar.
+- **Peristiwa Pasca Kematian di Alam Barzakh:**
+  - *Sakaratul Maut:* Transisi pemisahan ruh dari jasad.
+  - *Alam Barzakh:* Dinding pembatas antara kehidupan fana dunia dengan akhirat kelak.
+  - *Fitnah Pertanyaan Kubur:* Dialog kritis Malaikat Munkar dan Nakir mengenai Rabb, Nabi, Kitab, dan Kiblat.
+  - *Nikmat & Siksa Kubur:* Taman surga (*Raudhah min Riyadhil Jannah*) bagi orang saleh dan lubang neraka bagi pelaku maksiat.
+  - *Amalan Pelindung:* Shalat tepat waktu, membaca dan mentadaburi Surah Al-Mulk setiap malam, sedekah jariyah, serta doa perlindungan dari siksa kubur saat tasyahud akhir.
+
+---
+
+### 2. 9 Kronologi Tahapan Akbar Hari Akhir
+1. **Nafkhatush Sha'iq:** Tiupan sangkakala pertama Malaikat Israfil yang meluluhlantakkan kosmos semesta dan mematikan semua makhluk (Q.S. Az-Zumar: 68).
+2. **Nafkhatul Ba'ats:** Tiupan kedua yang membangkitkan seluruh jiwa manusia dari jasad yang tersisa pada tulang ekor (*'ajbudz dzanab*).
+3. **Yaumul Ba'ats:** Hari kebangkitan seluruh umat manusia dari alam kubur sejak Nabi Adam AS hingga manusia terakhir.
+4. **Yaumul Mahsyar:** Hari berkumpulnya seluruh manusia di Padang Mahsyar yang putih luas tanpa naungan selain Arsy Allah, di mana matahari didekatkan hanya berjarak 1 mil dan manusia tenggelam dalam keringatnya sendiri sesuai bobot dosanya.
+5. **Syafa'at 'Uzhma:** Pertolongan akbar Rasulullah Muhammad SAW atas izin Allah untuk mempercepat dimulainya hisab keadilan.
+6. **Yaumul Hisab:** Hari perhitungan seluruh rekaman jejak amal secara mendetail, di mana mulut manusia dikunci rapat sedangkan tangan dan kaki yang bersaksi (Q.S. Yasin: 65).
+7. **Yaumul Mizan:** Hari penimbangan bobot pahala amal kebajikan melawan amal kemaksiatan dengan neraca keadilan mutlak (Q.S. Al-Anbiya: 47).
+8. **As-Shirath:** Jembatan halus lagi tajam yang dibentangkan di atas jurang Neraka Jahannam menuju pintu Surga.
+9. **Yaumul Jaza' (Surga & Neraka):** Tempat tinggal pembalasan abadi:
+   - *Surga (Jannah):* Firdaus, 'Adn, Na'im, Ma'wa, Darussalam bagi orang bertakwa.
+   - *Neraka (Jahannam):* Lazha, Huthamah, Sa'ir, Saqar, Jahim, Hawiyah bagi orang kafir dan pendurhaka.
+
+---
+
+### 3. Hubungan Iman Hari Akhir dengan Akhlak & Kehidupan Sehari-hari
+- **Konsep "Rem Moral" (Moral Brake):**
+  Kesadaran akan pengawasan Allah (*Muraqabatullah*) dan pertanggungjawaban hisab menjadi benteng psikologis otomatis yang menahan seorang muslim saat terbersit nafsu melakukan kecurangan, korupsi, bullying, maupun maksiat tersembunyi.
+- **5 Dimensi Karakter Pelajar:**
+  1. *Integritas Akademik:* Anti-mencontek dan tidak plagiat tugas memakai AI karena meyakini nilai curang akan dihisab di Yaumul Mizan.
+  2. *Adab Digital (Netiquette):* Tidak berkomentar jahat (*cyberbullying*) atau menyebarkan hoaks karena jari-jemari akan berbicara di Yaumul Hisab.
+  3. *Manajemen Waktu:* Memanfaatkan usia muda secara produktif dan mendirikan shalat fardhu tepat waktu (*al-waqtu kassaif*).
+  4. *Solidaritas Sosial & Dermawan:* Gemar berbagi infak/sedekah sebagai tabungan abadi *Mazra'atul Akhirah*.
+  5. *Resiliensi & Ketabahan Hati:* Tidak mudah putus asa menghadapi musibah dunia karena meyakini ada balasan keadilan mutlak di akhirat.
+
+---
+
+### 4. Refleksi, Analisis, dan Pengembangan Sikap
+- **Studi Kasus Digital:** Menolak budaya pamer (*flexing*) yang memicu kesombongan (*takabbur*), menjaga lisan di media sosial, dan tidak mencari jalan pintas haram dalam belajar.
+- **Muhasabah 8 Dimensi Diri:**
+  Mengaudit diri setiap malam (*Hasibu anfusakum qabla an tuhasabu* - Umar bin Khattab r.a.) mengenai kualitas shalat, rezeki halal, kejujuran lisan, dan keikhlasan hati.
+- **Matriks Kebiasaan Harian:**
+  Membiasakan zikir pagi-petang, tadarus Al-Qur'an (khususnya Surah Al-Mulk), dan istighfar memohon keselamatan akhirat.
+
+---
+
+### 5. Hikmah Agung Beriman kepada Hari Akhir
+1. Menumbuhkan kesadaran bahwa hidup di dunia adalah ladang sementara (*Mazra'atul Akhirah*).
+2. Membentuk pribadi berintegritas tinggi dan berakhlak mulia di ruang nyata maupun digital.
+3. Memberikan ketenteraman batin atas segala ketidakadilan duniawi karena pasti diadili di Mahkamah Ilahi.
+4. Menghindarkan diri dari penyakit hati seperti riya, sombong, iri dengki, dan cinta dunia yang berlebihan (*Hubbud Dunya*).
+5. Memotivasi untuk senantiasa memperbanyak amal jariyah dan amal saleh tanpa pamrih manusia.
+6. Memperteguh harapan meraih syafaat Nabi Muhammad SAW dan kenikmatan abadi Surga Firdaus.
+
+Apakah ada bagian tertentu seperti rincian dalil, tanda kiamat, atau pembahasan kuis HOTS yang ingin kamu perdalam bersama Masterku AI? 😊`;
+      }
+
+      // ==================== KELAS 9 SEMESTER 1 BAB 1: SEMANGAT KEILMUAN Q.S. AL-MUJADILAH: 11 & Q.S. AZ-ZUMAR: 9 ====================
+      else if (
+        ((q.includes('kelas 9') || q.includes('kelas ix')) && (q.includes('bab 1') || q.includes('keilmuan') || q.includes('ilmu'))) ||
+        q.includes('mujadalah') ||
+        q.includes('mujadilah') ||
+        q.includes('al-mujadalah') ||
+        q.includes('al-mujadilah') ||
+        q.includes('az-zumar') ||
+        q.includes('az zumar') ||
+        q.includes('zumar ayat 9') ||
+        q.includes('mujadalah ayat 11') ||
+        q.includes('mujadilah ayat 11') ||
+        q.includes('mim sukun') ||
+        q.includes('hukum mim sukun') ||
+        q.includes('ikhfa syafawi') ||
+        q.includes('idgham mimi') ||
+        q.includes('idgham mutamatsilain') ||
+        q.includes('idzhar syafawi') ||
+        q.includes('asyaddu izhhar') ||
+        q.includes('tafassuh') ||
+        q.includes('tafassahu') ||
+        q.includes('insyuzu') ||
+        q.includes('ulul albab') ||
+        q.includes('qanit') ||
+        q.includes('thalabul ilmi')
+      ) {
+        response = `📖 Rangkuman Materi Lengkap PAI & Budi Pekerti Kelas IX Semester 1 Bab 1:
+"Meraih Kemuliaan Derajat dengan Semangat Keilmuan: Telaah Q.S. Al-Mujādilah [58]: 11, Q.S. Az-Zumar [39]: 9, Hadis Terkait, serta Hukum Bacaan Mim Sukun"
+
+1. 📜 Q.S. Al-Mujādilah [58]: 11 dan Q.S. Az-Zumar [39]: 9 Sesuai Kaidah Tajwid:
+• Q.S. Al-Mujādilah [58]: Ayat 11:
+  "يٰٓاَيُّهَا الَّذِيْنَ اٰمَنُوْٓا اِذَا قِيْلَ لَكُمْ تَفَسَّحُوْا فِى الْمَجٰلِسِ فَافْسَحُوْا يَفْسَحِ اللّٰهُ لَكُمْۚ وَاِذَا قِيْلَ انْشُزُوْا فَانْشُزُوْا يَرْفَعِ اللّٰهُ الَّذِيْنَ اٰمَنُوْا مِنْكُمْۙ وَالَّذِيْنَ اُوْتُوا الْعِلْمَ دَرَجٰتٍۗ وَاللّٰهُ بِمَا تَعْمَلُوْنَ خَبِيْرٌ"
+  (Yā ayyuhallażīna āmanū iżā qīla lakum tafassaḥū fil-majālisi fafsaḥū yafsaḥillāhu lakum, wa iżā qīlansyuzū fansyuzū yarfa'illāhullażīna āmanū minkum wallażīna ūtul-'ilma darajāt, wallāhu bimā ta'malūna khabīr)
+  - Asbabun Nuzul: Terjadi di majelis suffah Masjid Nabawi ketika sahabat veteran Perang Badar tiba terlambat dan tidak mendapat tempat duduk. Rasulullah Saw. meminta hadirin bergeser melapangkan tempat, sebagian orang enggan beranjak. Allah menurunkan ayat ini menegaskan adab toleransi majelis dan mengangkat derajat orang beriman serta berilmu.
+  - Kaidah Tajwid Khusus Ayat: Mad Ja'iz Munfashil (يٰٓاَيُّهَا الَّذِيْنَ / اٰمَنُوْٓا اِذَا - 4/5 harakat), Idzhar Syafawi (لَكُمْ تَفَسَّحُوْا / لَكُمْۚ وَاِذَا), Ikhfa Haqiqi (انْشُزُوْا / مِنْكُمْۙ), Lam Jalalah Tafkhim (يَفْسَحِ اللّٰهُ / يَرْفَعِ اللّٰهُ), dan Mad 'Aridh Lissukun (خَبِيْرٌ - Ra' Tarqiq).
+
+• Q.S. Az-Zumar [39]: Ayat 9:
+  "اَمَّنْ هُوَ قَانِتٌ اٰنَاۤءَ الَّيْلِ سَاجِدًا وَّقَاۤىِٕمًا يَّحْذَرُ الْاٰخِرَةَ وَيَرْجُوْا رَحْمَةَ رَبِّهٖۗ قُلْ هَلْ يَسْتَوِى الَّذِيْنَ يَعْلَمُوْنَ وَالَّذِيْنَ لَا يَعْلَمُوْنَۗ اِنَّمَا يَتَذَكَّرُ اُولُوا الْاَلْبَابِ"
+  (Amman huwa qānitun ānā'al-laili sājidaw wa qā'imay yaḥżarul-ākhirata wa yarjū raḥmata rabbih, qul hal yastawillażīna ya'lamūna wallażīna lā ya'lamūn, innamā yatażakkaru ulul-albāb)
+  - Makna Pokok: Melukiskan kontras mutlak antara orang yang berilmu dengan orang yang jahil (tidak berilmu). Karakter ahli ilmu adalah "Qānit" (tunduk beribadah pada larut malam: sujud & qiyam), menyeimbangkan Khauf (takut azab akhirat) dan Raja' (mengharap rahmat Allah), serta menyandang predikat "Ulul Albāb" (insan berakal jernih dan berkesadaran spiritual tinggi).
+
+2. 🔍 Hukum Bacaan Mim Sukun (مْ) dalam Ayat & Kaidah Tajwid:
+Mim sukun bertemu salah satu dari 28 huruf hijaiyah terbagi menjadi 3 hukum:
+• (1) Ikhfā' Syafawī (إِخْفَاءٌ شَفَوِيٌّ):
+  - Huruf: 1 huruf, yaitu Ba' (ب).
+  - Kaidah: Mim sukun dibaca samar di bibir dengan merapatkan kedua bibir secara ringan disertai dengung (ghunnah) 2 harakat.
+  - Contoh: "تَرْمِيْهِمْ بِحِجَارَةٍ", "فَاحْكُمْ بَيْنَهُمْ".
+• (2) Idghām Mīmī / Mutamātsilain (إِدْغَامٌ مِيْمِيٌّ):
+  - Huruf: 1 huruf, yaitu sesama Mim (م).
+  - Kaidah: Mim sukun dileburkan ke dalam huruf mim berikutnya dengan tasydid sempurna disertai ghunnah merdu 2 harakat.
+  - Contoh: "فِيْ قُلُوْبِهِمْ مَّرَضٌ", "اَطْعَمَهُمْ مِّنْ جُوْعٍ".
+• (3) Idzhār Syafawī (إِظْهَارٌ شَفَوِيٌّ):
+  - Huruf: 26 huruf hijaiyah lainnya (semua huruf selain Ba' dan Mim).
+  - Kaidah: Mim sukun dibaca jelas, tegas, terang di kedua bibir tanpa dengung.
+  - Peringatan Khusus (Asyaddu Izhhār): Harus ekstra jelas dan dilarang samar saat bertemu Wawu (و) dan Fa' (ف) karena makhrajnya sama-sama berdekatan di bibir.
+  - Contoh dalam Q.S. Al-Mujādilah: 11:
+    * "لَكُمْ تَفَسَّحُوْا" (Mim sukun bertemu Ta' -> Idzhar Syafawi)
+    * "لَكُمْ وَاِذَا" (Mim sukun bertemu Wawu -> Idzhar Syafawi / Asyaddu Izhhar)
+    * "مِنْكُمْ وَالَّذِيْنَ" (Mim sukun bertemu Wawu -> Idzhar Syafawi / Asyaddu Izhhar)
+
+3. 📖 Mufradat (Kamus Kata per Kata) & Terjemah Kontekstual:
+• Mufradat Q.S. Al-Mujādilah: 11:
+  - يَٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُوٓا : Wahai orang-orang yang beriman
+  - إِذَا قِيلَ لَكُمْ : Apabila dikatakan kepadamu
+  - تَفَسَّحُوا۟ : Berlapang-lapanglah / berilah kelonggaran
+  - فِى ٱلْمَجَٰلِسِ : Di dalam majelis-majelis pertemuan/ilmu
+  - فَٱفْسَحُوا۟ : Maka lapangkanlah (geser tempat dudukmu)
+  - يَفْسَحِ ٱللَّهُ لَكُمْ : Niscaya Allah akan melapangkan (rezeki, rahmat, dan kuburmu)
+  - وَإِذَا قِيلَ ٱنشُزُوا۟ : Dan apabila dikatakan "Bangkitlah kamu"
+  - فَٱنشُزُوا۟ : Maka bangkitlah (segera berdiri menunaikan perintah kebaikan)
+  - يَرْفَعِ ٱللَّهُ : Niscaya Allah akan meninggikan/mengangkat
+  - ٱلَّذِينَ ءَامَنُوا۟ مِنكُمْ : Orang-orang yang beriman di antaramu
+  - وَٱلَّذِينَ أُوتُوا۟ ٱلْعِلْمَ : Dan orang-orang yang diberi ilmu pengetahuan
+  - دَرَجَٰتٍ : Beberapa derajat keluhuran (duniawi & ukhrawi)
+  - وَٱللَّهُ بِمَا تَعْمَلُونَ خَبِيرٌ : Dan Allah Maha Teliti terhadap apa yang kamu kerjakan
+• Mufradat Q.S. Az-Zumar: 9:
+  - أَمَّنْ هُوَ قَٰنِتٌ : Apakah orang yang beribadah secara tunduk/khusyuk
+  - ءَانَآءَ ٱلَّيْلِ : Di waktu-waktu larut malam (tahajud)
+  - سَاجِدًا وَقَآئِمًا : Dalam keadaan sujud dan berdiri shalat
+  - يَحْذَرُ ٱلْـَٔاخِرَةَ : Yang merasa takut akan azab akhirat
+  - وَيَرْجُوا۟ رَحْمَةَ رَبِّهِۦ : Dan mengharapkan limpahan rahmat Tuhannya
+  - قُلْ هَلْ يَسْتَوِى : Katakanlah: "Adakah sama...?"
+  - ٱلَّذِينَ يَعْلَمُونَ : Orang-orang yang berilmu (mengetahui)
+  - وَٱلَّذِينَ لَا يَعْلَمُونَ : Dengan orang-orang yang tidak berilmu (jahil)?
+  - إِنَّمَا يَتَذَكَّرُ : Sesungguhnya hanya yang dapat mengambil pelajaran
+  - أُو۟لُوا۟ ٱلْأَلْبَٰبِ : Yaitu orang-orang yang memiliki akal sehat jernih (Ulul Albab)
+
+4. 📜 Hadis-Hadis Sahih Terkait Semangat Keilmuan:
+• H.R. Ibnu Majah No. 224: "طَلَبُ الْعِلْمِ فَرِيْضَةٌ عَلَى كُلِّ مُسْلِمٍ" (Menuntut ilmu itu adalah kewajiban fardhu bagi setiap muslim).
+• H.R. Muslim No. 2699: "Barangsiapa menempuh jalan untuk menuntut ilmu, Allah mudahkan baginya jalan menuju surga."
+• H.R. Abu Dawud No. 3641: "Sesungguhnya keutamaan orang berilmu dibanding ahli ibadah tanpa ilmu laksana keutamaan rembulan purnama atas seluruh gugusan bintang gemintang; dan sesungguhnya ulama adalah pewaris para nabi."
+• H.R. Muslim No. 1631: "Apabila anak Adam wafat, terputuslah seluruh amalnya kecuali 3 perkara: sedekah jariyah, ilmu yang bermanfaat, atau anak saleh yang mendoakannya."
+
+5. 💎 6 Dimensi Hikmah Luhur Semangat Keilmuan:
+(1) Kenaikan Derajat Ganda: Allah menjanjikan martabat terhormat di dunia (dihargai & memimpin peradaban) dan derajat tertinggi di surga akhirat.
+(2) Bekal Khalifah Pemakmur Bumi: Penguasaan ilmu agama dan sains teknologi merupakan syarat mutlak mewujudkan rahmatan lil-'alamin.
+(3) Etika dan Toleransi Sosial Majelis: Adab berlapang dada (tafassuh) membentuk budaya inklusif, menghormati teman, dan tidak egois.
+(4) Integritas Moral di Era Digital & AI: Menuntut ilmu dengan kejujuran, tidak mencontek atau plagiat AI, sebab "Wallāhu bimā ta'malūna khabīr".
+(5) Keseimbangan Spiritual & Intelektual: Menjadi Ulul Albab yang pintar riset ilmiah namun tetap tunduk shalat tahajud dan berakhlak mulia.
+(6) Amal Jariyah Abadi: Ilmu yang diajarkan atau dituliskan menjadi investasi pahala yang mengalir tanpa henti hingga hari kiamat.`;
+      } else if (
         (q.includes('kelas 8') && q.includes('bab 1')) ||
         (q.includes('kelas viii') && q.includes('bab 1')) ||
         q.includes('al-hujurat') ||
@@ -419,6 +865,185 @@ c. Hukum Huruf Ra' (ر):
 • Bagi Jenazah: Memperoleh doa ampunan ratusan kaum muslimin dan penghormatan terakhir yang mulia.
 • Bagi Pengurus/Keluarga: Memperoleh pahala 2 Qirath (sebesar 2 Gunung Uhud, H.R. Bukhari-Muslim) dan menguatkan ukhuwah islamiyah.
 • Bagi Pelajar & Remaja: Menyadarkan bahwa kehidupan duniawi fana, menumbuhkan sifat tawadhu', serta memotivasi untuk selalu berbuat kebajikan sebelum ajal menjemput.`;
+      } else if (
+        ((q.includes('kelas 8') || q.includes('kelas viii')) && q.includes('bab 10')) ||
+        q.includes('turki usmani') ||
+        q.includes('turki utsmani') ||
+        q.includes('utsmaniyah') ||
+        q.includes('ottoman') ||
+        q.includes('al-fatih') ||
+        q.includes('al fatih') ||
+        q.includes('muhammad al-fatih') ||
+        q.includes('mehmed ii') ||
+        q.includes('konstantinopel') ||
+        q.includes('sulaiman al-qanuni') ||
+        q.includes('al-qanuni') ||
+        q.includes('the magnificent') ||
+        q.includes('sultan salim') ||
+        q.includes('selim i') ||
+        q.includes('yanisari') ||
+        q.includes('janissary') ||
+        q.includes('kanunname') ||
+        q.includes('sistem millet') ||
+        q.includes('mimar sinan') ||
+        q.includes('kemunduran turki') ||
+        q.includes('faktor kemunduran turki') ||
+        q.includes('sick man of europe') ||
+        q.includes('hikmah turki usmani') ||
+        q.includes('suku kayi') ||
+        q.includes('ertugrul') ||
+        q.includes('osman i')
+      ) {
+        response = `🏰 Rangkuman Materi Lengkap PAI Kelas VIII Semester 2 Bab 10:
+"Merefleksikan Diri terhadap Sejarah dan Peran Kekhalifahan Islam Pasca Khulafaur Rasyidin: Dinasti Turki Usmani"
+
+1. 🚩 Sejarah Berdirinya Dinasti Turki Usmani:
+• Asal-Usul Suku Kayi: Berasal dari kabilah Oghuz Turki nomaden di Asia Tengah yang dipimpin Sulaiman Shah, kemudian dilanjutkan putranya Ertugrul Bey bermigrasi ke Anatolia (Turki modern) akibat serbuan bangsa Mongol.
+• Jasa Membantu Seljuk & Hadiah Sogut: Ertugrul membantu Sultan Alauddin II dari Kesultanan Seljuk Rum melawan Bizantium dan Mongol. Sebagai penghargaan, mereka dianugerahi wilayah subur Sogut di perbatasan Bizantium.
+• Deklarasi Kemerdekaan 1299 M: Setelah Kesultanan Seljuk Rum runtuh diserang Mongol, putra Ertugrul bernama Osman I (Usman Bey) memproklamasikan berdirinya Kesultanan Usmani merdeka pada tahun 1299 M.
+• Wasiat Emas Osman I kepada Orhan: Menegakkan keadilan syariat, menghormati para ulama, melindungi rakyat tanpa membedakan suku/agama, dan menjauhi kezaliman serta hawa nafsu kekuasaan.
+• Perluasan Awal: Penaklukan kota strategis Bursa (1326 M) menjadi ibukota pertama, penyeberangan ke Semenanjung Balkan (Gallipoli 1354 M), dan pemindahan ibukota ke Adrianopel/Edirne (1362 M).
+
+2. 🌟 Puncak Kejayaan Dinasti Turki Usmani:
+• Kepemimpinan 3 Sultan Keemasan:
+  (1) Sultan Muhammad Al-Fatih (Mehmed II, 1451–1481 M):
+      - Penaklukan legendaris Konstantinopel pada Selasa, 29 Mei 1453 M (usia 21 tahun), membuktikan sabda Rasulullah Saw. (H.R. Ahmad No. 18977).
+      - Strategi brilian memindahkan 70 kapal perang melintasi daratan berbukit Galata hanya dalam waktu satu malam dan pembuatan Meriam Raksasa Basilika karya insinyur Urban.
+      - Toleransi tinggi: Mengeluarkan Piagam Kebebasan Ahdnama bagi umat Kristen Ortodoks dan mengubah nama Konstantinopel menjadi Kostantiniyye / Islambol (Istanbul).
+  (2) Sultan Salim I (1512–1520 M):
+      - Mengamankan wilayah timur di Chaldiran (1514 M) dan menaklukkan Dinasti Mamluk di Mesir dan Syam (1517 M).
+      - Menyatukan Dua Kota Suci Makkah dan Madinah ke dalam proteksi Usmani serta menyandang gelar mulia "Khadimul Haramain Asy-Syarifain" (Pelayan Dua Tanah Suci).
+  (3) Sultan Sulaiman Al-Qanuni (Suleiman the Magnificent, 1520–1566 M):
+      - Menembus jantung Eropa Tengah (penaklukan Beograd 1521, Pulau Rhodes 1522, dan Pertempuran Mohacs 1526).
+      - Wilayah kekuasaan membentang di 3 Benua (Eropa Tenggara, Asia Barat, dan Afrika Utara).
+      - Kodifikasi hukum komprehensif Kanun-i Osmani (Kanunname) yang memadukan hukum syariat dengan ketertiban administrasi negara.
+• 3 Pilar Peradaban Usmani:
+  - Supremasi Hukum & Sistem Millet: Otonomi keagamaan penuh bagi komunitas non-muslim (Yahudi dan Kristen) untuk mengurus hukum keluarga dan ibadah masing-masing.
+  - Kekuatan Militer Terorganisir: Korps elit Yanisari (Janissary) infanteri terlatih dan kavaleri Sipahi berdisiplin tinggi.
+  - Arsitektur Megah & Sistem Sosial Kulliye: Mahakarya arsitek Mimar Sinan (Masjid Suleymaniye, Masjid Selimiye) yang memadukan masjid dengan madrasah, rumah sakit gratis (darussyifa), dan dapur umum (imaret) berbasis wakaf.
+
+3. ⚠️ Faktor-Faktor Kemunduran Dinasti Turki Usmani:
+• Faktor Internal:
+  (1) Kemerosotan Moral & Hedonisme Para Sultan: Sultan-sultan penerus bergaya hidup mewah di istana (contoh Istana Dolmabahce yang menumpuk utang negara) dan enggan turun ke medan pertempuran.
+  (2) Intrik Politik Harem & Sistem Sangkar (Kafes): Para pangeran dikurung tanpa pengalaman memimpin dan diplomasi nyata, serta campur tangan intrik keluarga istana.
+  (3) Korupsi, Suap (Risywah), & Jual-Beli Jabatan: Posisi menteri, wazir, hakim (qadhi), dan gubernur diperjualbelikan kepada penawar tertinggi.
+  (4) Pemberontakan Korps Yanisari: Dari pasukan penjaga kekhalifahan berubah menjadi kelompok arogansi bersenjata yang sering memberontak dan membunuh sultan yang hendak melakukan reformasi.
+  (5) Kemandekan Intelektual & Fatwa Larangan Mesin Cetak: Penolakan mesin cetak Gutenberg selama hampir 300 tahun di Usmani menyebabkan ketertinggalan literasi dan sains yang parah.
+• Faktor Eksternal:
+  (1) Kebangkitan Renaisans & Revolusi Industri Eropa Barat: Menghasilkan teknologi persenjataan canggih, navigasi maritim global, dan keunggulan ekonomi.
+  (2) Kegagalan Pengepungan Wina II (1683 M) & Perjanjian Karlowitz (1699 M): Usmani dipaksa menyerahkan wilayah luas di Eropa Tengah kepada koalisi Liga Suci.
+  (3) Julukan "The Sick Man of Europe": Kondisi Usmani di abad ke-19 yang rapuh, terlilit utang luar negeri, dan menjadi perebutan kekuasaan negara-negara imperialis Barat.
+  (4) Kekalahan dalam Perang Dunia I & Pembubaran 1924 M: Usmani runtuh setelah PD I dan sistem kekhalifahan resmi dihapuskan oleh Majelis Nasional Agung Turki pimpinan Mustafa Kemal Ataturk pada 3 Maret 1924 M.
+
+4. 🌺 4 Dimensi Hikmah Sejarah Dinasti Turki Usmani:
+(1) Dimensi Keteladanan Kepemimpinan Visioner: Menggabungkan kekuatan ruhiyah (shalat tahajud) dengan kecerdasan sains-teknologi persenjataan modern laksana Sultan Muhammad Al-Fatih.
+(2) Dimensi Keadilan Hukum & Toleransi Keberagaman: Supremasi hukum yang adil tanpa tebang pilih dan perlindungan hak-hak kaum minoritas menjaga kerukunan bangsa.
+(3) Dimensi Ibrah Bahaya Korupsi & Kemewahan: Hedonisme para pemimpin, suap, dan perpecahan internal terbukti mampu meruntuhkan daulah adidaya sebesar apapun.
+(4) Dimensi Etos Inovasi Sains & Literasi: Umat Islam wajib adaptif terhadap perkembangan riset, teknologi, dan literasi digital modern agar tidak tertinggal oleh kemajuan zaman.`;
+      } else if (
+        ((q.includes('kelas 8') || q.includes('kelas viii')) && q.includes('bab 9')) ||
+        q.includes('haji') ||
+        q.includes('umrah') ||
+        q.includes('umroh') ||
+        q.includes('rukun haji') ||
+        q.includes('wajib haji') ||
+        q.includes('syarat haji') ||
+        q.includes('manasik haji') ||
+        q.includes('talbiyah') ||
+        q.includes('tamattu') ||
+        q.includes('ifrad') ||
+        q.includes('qiran') ||
+        q.includes('wukuf') ||
+        q.includes('thawaf') ||
+        q.includes('tawaf') ||
+        q.includes('sa\'i') ||
+        q.includes('sai') ||
+        q.includes('tahallul') ||
+        q.includes('miqat') ||
+        q.includes('larangan ihram') ||
+        q.includes('dam haji') ||
+        q.includes('hikmah haji')
+      ) {
+        response = `🕋 Rangkuman Materi Lengkap PAI Kelas VIII Semester 2 Bab 9:
+"Menerapkan Ketentuan Haji dan Umrah: Meneladani Ketaatan dan Mempererat Ukhuwah Islamiyah Dunia"
+
+1. 📖 Pengertian Haji dan Umrah & Perbedaannya:
+• Haji secara Bahasa: Al-Qashdu (الْقَصْدُ) yang berarti menyengaja atau menuju ke suatu tempat yang diagungkan.
+• Haji secara Istilah Syariat: Menyengaja mengunjungi Baitullah (Ka'bah) di kota suci Makkah Al-Mukarramah pada waktu tertentu (bulan-bulan haji: Syawal, Dzulqa'dah, dan 1-10 Dzulhijjah) untuk melaksanakan serangkaian amalan ibadah tertentu (wukuf, thawaf, sa'i, dll.) dengan niat semata-mata mengharap ridha Allah Swt.
+• Umrah secara Bahasa: Az-Ziyarah (الزِّيَارَةُ) yang berarti berziarah atau berkunjung.
+• Umrah secara Istilah Syariat: Berkunjung ke Baitullah (Ka'bah) untuk melaksanakan thawaf, sa'i, dan bercukur (tahallul) dengan syarat dan ketentuan syariat yang dapat dikerjakan sewaktu-waktu sepanjang tahun.
+• Perbedaan Pokok Haji vs Umrah:
+  - Waktu: Haji hanya sah pada bulan haji (wukuf 9 Dzulhijjah), sedangkan Umrah bebas sepanjang tahun.
+  - Rukun: Haji ada wukuf di Arafah (puncak rukun), sedangkan Umrah TIDAK ada wukuf.
+  - Kewajiban: Haji ada mabit di Muzdalifah & Mina serta melontar jumrah, sedangkan Umrah tidak ada.
+
+2. 📜 Dalil Naqli Al-Qur'an & Hadits Shahih:
+• Q.S. Āli 'Imrān [3]: 97 (Kewajiban Haji bagi yang Mampu / Istitha'ah):
+  "وَلِلّٰهِ عَلَى النَّاسِ حِجُّ الْبَيْتِ مَنِ اسْتَطَاعَ اِلَيْهِ سَبِيْلًا ۗ وَمَنْ كَفَرَ فَاِنَّ اللّٰهَ غَنِيٌّ عَنِ الْعٰلَمِيْنَ"
+  Artinya: "Dan (di antara) kewajiban manusia terhadap Allah adalah melaksanakan ibadah haji ke Baitullah, yaitu bagi orang yang mampu mengadakan perjalanan ke sana. Barangsiapa mengingkari (kewajiban haji), maka sesungguhnya Allah Mahakaya (tidak memerlukan sesuatu) dari seluruh alam."
+• Q.S. Al-Baqarah [2]: 196 (Perintah Menyempurnakan Haji & Umrah):
+  "وَاَتِمُّوا الْحَجَّ وَالْعُمْرَةَ لِلّٰهِ"
+  Artinya: "Dan sempurnakanlah ibadah haji dan umrah karena Allah..."
+• H.R. Al-Bukhari No. 1773 & Muslim No. 1349 (Balasan Haji Mabrur):
+  "وَالْحَجُّ الْمَبْرُورُ لَيْسَ لَهُ جَزَاءٌ إِلَّا الْجَنَّةُ"
+  Artinya: "Dan haji yang mabrur tidak ada balasan baginya melainkan surga."
+• H.R. Al-Bukhari No. 1521: "Barangsiapa menunaikan ibadah haji tanpa berbuat rafats (berkata kotor) dan tidak berbuat fasik, ia kembali suci dari dosa seperti bayi yang baru dilahirkan ibunya."
+
+3. ⚖️ Syarat, Rukun, Wajib, Larangan Ihram, dan Macam-Macam Dam:
+• 5 Syarat Wajib Haji: (1) Islam, (2) Baligh, (3) Berakal sehat, (4) Merdeka, (5) Mampu (Istitha'ah: jasmani sehat, finansial cukup, aman perjalanan, kuota/izin, dan mahram bagi wanita).
+• 6 Rukun Haji (Wajib dikerjakan, batal jika ditinggalkan, tidak bisa ditebus dam):
+  1. Ihram (Niat memulai haji di miqat dengan mengenakan pakaian ihram).
+  2. Wukuf di Padang Arafah (Puncak haji, mulai tergelincir matahari 9 Dzulhijjah hingga fajar 10 Dzulhijjah).
+  3. Thawaf Ifadhah (Mengelilingi Ka'bah 7 putaran berlawanan jarum jam).
+  4. Sa'i (Berjalan dan berlari-lari kecil 7 kali antara Bukit Shafa dan Marwah).
+  5. Tahallul (Mencukur atau memotong minimal 3 helai rambut kepala).
+  6. Tertib (Melaksanakan rukun secara berurutan sesuai sunnah).
+• 5 Rukun Umrah: Ihram, Thawaf Umrah, Sa'i, Tahallul, dan Tertib (Tanpa Wukuf).
+• 6 Wajib Haji (Jika ditinggalkan haji tetap sah namun berdosa dan WAJIB membayar Dam):
+  (1) Ihram dari Miqat Makani, (2) Mabit di Muzdalifah (malam 10 Dzulhijjah), (3) Mabit di Mina (malam Tasyrik 11, 12, 13 Dzulhijjah), (4) Melontar Jumrah (Aqabah, Ula, Wustha), (5) Menjauhi larangan ihram, (6) Thawaf Wada' (perpisahan sebelum meninggalkan Makkah).
+• Larangan Ihram:
+  - Khusus Pria: Memakai pakaian berjahit, memakai sepatu/alas kaki menutupi mata kaki, dan menutup kepala dengan topi/sorban menempel.
+  - Khusus Wanita: Menutup wajah (cadar/masker tanpa hajat) dan memakai sarung tangan yang menutupi jemari.
+  - Umum (Pria & Wanita): Memakai wewangian/parfum, memotong rambut/kuku, membunuh/berburu binatang darat, mencabut pepohonan tanah suci, melangsungkan akad nikah (menikah/menikahkan), serta berbuat rafats, fusuq, dan jidal (bertengkar).
+• 4 Klasifikasi Dam (Denda):
+  1. Tertib-Taqdir: Karena meninggalkan wajib haji atau haji Tamattu'/Qiran (Seekor kambing; jika tidak mampu: puasa 10 hari, yaitu 3 hari di tanah suci dan 7 hari di tanah air).
+  2. Tertib-Ta'dil: Karena hubungan suami-istri sebelum tahallul awal (Seekor unta/sapi; jika tidak mampu: sedekah senilai unta berupa makanan atau puasa pengganti).
+  3. Takhyir-Ta'dil: Karena berburu binatang darat (Memilih menyembelih hewan senilai buruan, memberi makan fakir miskin, atau puasa).
+  4. Takhyir-Taqdir: Karena melanggar larangan ihram seperti memotong rambut/kuku, pakai parfum (Memilih potong 1 kambing, sedekah makan 6 fakir miskin, atau puasa 3 hari).
+
+4. 🕋 3 Macam Cara Pelaksanaan Haji:
+(1) Haji Tamattu' (مُتَمَتِّعٌ):
+  - Cara: Melaksanakan ibadah UMRAH terlebih dahulu pada bulan haji, bertahallul bebas dari ihram, lalu berihram kembali untuk HAJI pada tanggal 8 Dzulhijjah.
+  - Hukum: Afdhal bagi jamaah Indonesia karena lebih leluasa dan tidak terlalu lama terikat larangan ihram.
+  - Konsekuensi: Wajib membayar Dam Nusuk (seekor kambing atau puasa 10 hari).
+(2) Haji Ifrad (مُفْرِدٌ):
+  - Cara: Melaksanakan ibadah HAJI terlebih dahulu hingga tuntas tanggal 12/13 Dzulhijjah, setelah itu baru berihram untuk melaksanakan ibadah UMRAH.
+  - Hukum: Paling utama (afdhal) menurut mazhab Syafi'i jika mampu menjaga diri, tidak wajib membayar Dam.
+(3) Haji Qiran (قَارِنٌ):
+  - Cara: Berniat melaksanakan ibadah HAJI dan UMRAH sekaligus dalam satu amalan dan satu ihram secara bersamaan dari miqat.
+  - Konsekuensi: Jamaah wajib berada dalam kondisi ihram terus-menerus hingga selesai haji dan wajib membayar Dam Nusuk.
+
+5. 🧭 Panduan Manasik Haji Praktis & Kronologi 8–13 Dzulhijjah:
+• Bacaan Kalimat Talbiyah:
+  "لَبَّيْكَ اللّٰهُمَّ لَبَّيْكَ، لَبَّيْكَ لَا شَرِيْكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لَا شَرِيْكَ لَكَ"
+  (Labbaikallāhumma labbaīk, labbaīka lā syarīka laka labbaīk, innal-ḥamda wan-ni'mata laka wal-mulk, lā syarīka lak)
+  Artinya: "Aku penuhi panggilan-Mu ya Allah, aku penuhi panggilan-Mu. Aku penuhi panggilan-Mu, tidak ada sekutu bagi-Mu, aku penuhi panggilan-Mu. Sesungguhnya segala puji, kenikmatan, dan kerajaan hanyalah milik-Mu, tidak ada sekutu bagi-Mu."
+• 5 Miqat Makani: Zulhulaifah / Bir Ali (Madinah), Juhfah (Syam/Mesir), Yalamlam (Yaman & jalur penerbangan Indonesia), Qarnul Manazil (Najd), Dzatu 'Irq (Irak).
+• Alur Kronologis Manasik:
+  - 8 Dzulhijjah (Hari Tarwiyah): Berihram dari hotel/maktab Makkah, menuju tenda Mina untuk shalat lima waktu berjamaah dan istirahat.
+  - 9 Dzulhijjah (Hari Arafah): Menuju Padang Arafah, mendengarkan khutbah wukuf, shalat Jamak Qashar Taqdim Dzuhur-Ashar, memperbanyak doa, zikir, istighfar hingga maghrib tiba.
+  - Malam 10 Dzulhijjah (Mabit Muzdalifah): Berangkat ke Muzdalifah, shalat Maghrib-Isya jamak ta'khir, bermalam singkat dan mengumpulkan minimal 7 atau 49/70 butir batu kerikil.
+  - 10 Dzulhijjah (Hari Nahr / Idul Adha): Menuju Mina melontar Jumrah Aqabah (7 kerikil), menyembelih hewan dam, lalu Tahallul Awal (cukur rambut - bebas dari larangan ihram kecuali hubungan suami-istri).
+  - Menuju Makkah: Melaksanakan Thawaf Ifadhah di Ka'bah dan Sa'i Shafa-Marwah, lalu Tahallul Tsani (bebas dari seluruh larangan ihram secara total).
+  - 11, 12, 13 Dzulhijjah (Hari Tasyrik di Mina): Mabit di Mina dan melontar 3 jumrah setiap hari (Ula, Wustha, Aqabah masing-masing 7 kerikil). Boleh Nafar Awal (selesai tgl 12) atau Nafar Tsani (tuntas tgl 13).
+  - Thawaf Wada': Thawaf perpisahan 7 putaran tanpa sa'i saat hendak meninggalkan kota suci Makkah.
+
+6. 🌺 5 Dimensi Hikmah Agung Haji dan Umrah:
+(1) Dimensi Spiritual & Tauhid: Menjawab seruan Ilahi secara tulus, memurnikan tauhid laksana Nabi Ibrahim a.s. dan Nabi Ismail a.s.
+(2) Dimensi Kesetaraan Sosial (Egaliter): Semua manusia memakai kain ihram putih tanpa jahitan, melepas simbol kasta, kekayaan, dan jabatan duniawi di hadapan Allah.
+(3) Dimensi Ukhuwah Islamiyah Sedunia: Konferensi akbar jutaan umat muslim dari ratusan negara lintas benua, bahasa, dan ras menyatu dalam satu ikatan iman.
+(4) Dimensi Pendidikan Karakter & Sabar: Melatih ketahanan fisik, menahan emosi/amarah, melatih keikhlasan berbagi, dan saling tolong-menolong.
+(5) Dimensi Ibrah & Napak Tilas Sejarah: Meneladani keteguhan Siti Hajar mencari air di Shafa-Marwah (sa'i), perlawanan Ibrahim terhadap godaan setan (jumrah), dan kesyukuran atas air Zamzam.`;
       } else if (
         ((q.includes('kelas 8') || q.includes('kelas viii')) && q.includes('bab 8')) ||
         q.includes('cinta ilmu') ||
@@ -1748,6 +2373,13 @@ Tiga Dimensi Kesempurnaan Iman:
     askMasterkuAI(text);
   };
 
+  const getChapterBtnStyle = (isActive: boolean) =>
+    `px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 active:bg-emerald-600 active:text-amber-200 active:scale-[0.98] ${
+      isActive
+        ? 'bg-blue-600 text-white shadow-md font-black ring-2 ring-blue-300 border border-blue-500'
+        : 'bg-white/15 text-white hover:bg-white/25'
+    }`;
+
   return (
     <div className="space-y-6 pb-16">
       {/* Top Banner Header */}
@@ -1806,7 +2438,7 @@ Tiga Dimensi Kesempurnaan Iman:
       </div>
 
       {/* Main Tab Navigation */}
-      <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none border-b border-slate-200">
+      <div className="flex items-center gap-2 overflow-x-auto p-2 bg-sky-100/90 rounded-2xl border border-sky-200 scrollbar-none shadow-xs">
         {[
           { id: 'quran', label: 'Al-Qur\'an & Terjemah', icon: BookMarked, badge: 'Kemenag' },
           { id: 'hadits', label: 'Hadits 5 Perawi', icon: ScrollText, badge: '75 Hadits' },
@@ -1820,19 +2452,19 @@ Tiga Dimensi Kesempurnaan Iman:
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as TabType)}
-              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl font-semibold text-sm whitespace-nowrap transition-all border ${
+              className={`flex items-center gap-2.5 px-4 py-3 rounded-xl font-bold text-sm whitespace-nowrap transition-all border cursor-pointer active:bg-emerald-600 active:text-amber-200 active:border-emerald-500 active:scale-[0.98] ${
                 isActive
-                  ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
-                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:text-slate-900'
+                  ? 'bg-blue-600 text-white border-blue-700 shadow-md ring-2 ring-blue-400 font-extrabold'
+                  : 'bg-sky-50 text-black border-sky-200 hover:bg-sky-200/70 font-bold'
               }`}
             >
-              <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-slate-400'}`} />
-              <span>{tab.label}</span>
+              <Icon className={`w-4 h-4 font-bold shrink-0 drop-shadow-2xs ${isActive ? 'text-amber-300' : 'text-amber-500'}`} />
+              <span className={`font-bold ${isActive ? 'text-white' : 'text-black'}`}>{tab.label}</span>
               <span
-                className={`text-[11px] px-2 py-0.5 rounded-full font-medium ${
+                className={`text-[11px] px-2 py-0.5 rounded-full font-black ${
                   isActive
-                    ? 'bg-emerald-700 text-emerald-100'
-                    : 'bg-slate-100 text-slate-600'
+                    ? 'bg-amber-400 text-amber-950 shadow-2xs'
+                    : 'bg-amber-300/80 text-amber-950'
                 }`}
               >
                 {tab.badge}
@@ -2299,9 +2931,9 @@ Tiga Dimensi Kesempurnaan Iman:
           </div>
 
           {/* ========================================================================= */}
-          {/* SPECIAL FULL TEXTBOOK VIEWER FOR KELAS VII & KELAS VIII */}
+          {/* SPECIAL FULL TEXTBOOK VIEWER FOR KELAS VII, KELAS VIII, & KELAS IX */}
           {/* ========================================================================= */}
-          {(selectedBukuGrade === 'Kelas VII' || selectedBukuGrade === 'Kelas VIII' || selectedBukuGrade === 'Semua') && (
+          {(selectedBukuGrade === 'Kelas VII' || selectedBukuGrade === 'Kelas VIII' || selectedBukuGrade === 'Kelas IX' || selectedBukuGrade === 'Semua') && (
             <div className="space-y-4">
               <div className="bg-gradient-to-r from-emerald-800 via-teal-800 to-slate-900 rounded-2xl p-5 sm:p-6 text-white shadow-lg space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
@@ -2311,7 +2943,9 @@ Tiga Dimensi Kesempurnaan Iman:
                         BUKU PELAJARAN PAI INTERAKTIF
                       </span>
                       <span className="text-xs text-emerald-200 font-semibold">
-                        {selectedTextbookChapter === 'k8-bab6'
+                        {selectedTextbookChapter === 'k9-bab5' || selectedTextbookChapter === 'k9-bab4' || selectedTextbookChapter === 'k9-bab3' || selectedTextbookChapter === 'k9-bab2' || selectedTextbookChapter === 'k9-bab1'
+                          ? 'Kelas IX • Semester 1'
+                          : selectedTextbookChapter === 'k8-bab10' || selectedTextbookChapter === 'k8-bab9' || selectedTextbookChapter === 'k8-bab8' || selectedTextbookChapter === 'k8-bab7' || selectedTextbookChapter === 'k8-bab6'
                           ? 'Kelas VIII • Semester 2'
                           : selectedTextbookChapter === 'k8-bab5' || selectedTextbookChapter === 'k8-bab4' || selectedTextbookChapter === 'k8-bab3' || selectedTextbookChapter === 'k8-bab2' || selectedTextbookChapter === 'k8-bab1'
                           ? 'Kelas VIII • Semester 1'
@@ -2321,7 +2955,25 @@ Tiga Dimensi Kesempurnaan Iman:
                       </span>
                     </div>
                     <h3 className="text-lg sm:text-xl font-black text-white">
-                      {selectedTextbookChapter === 'k8-bab6'
+                      {selectedTextbookChapter === 'k9-bab5'
+                        ? 'Kelas IX Bab 5: Merefleksikan Sejarah Masuknya Islam di Indonesia (4 Teori Masuknya Islam, 6 Jalur Transmisi Dakwah, Kerajaan Perintis, Q.S. An-Nahl: 125, Hikmah, & Kuis HOTS)'
+                        : selectedTextbookChapter === 'k9-bab4'
+                        ? 'Kelas IX Bab 4: Menerapkan Ketentuan Penyembelihan Hewan, serta Kurban dan Akikah (Ketentuan Syariat, Q.S. Al-Kautsar: 1-3, Q.S. Al-An\'am: 162-163, Hadits Ihsan, Syarat Rukun, 4 Urat Leher, Komparasi Kurban vs Akikah, Hikmah, & Kuis HOTS)'
+                        : selectedTextbookChapter === 'k9-bab3'
+                        ? 'Kelas IX Bab 3: Menerapkan Makna Cinta Lingkungan (Pengertian & Dalil Naqli Q.S. Ar-Rūm: 41, Al-A\'rāf: 56, Al-Baqarah: 205, Hadits Menanam Pohon, 6 Urgensi, Bentuk Fasād, 5 Pilar Aksi, Hikmah, & Kuis HOTS)'
+                        : selectedTextbookChapter === 'k9-bab2'
+                        ? 'Kelas IX Bab 2: Meyakini dan Merefleksikan Iman kepada Hari Akhir (Pengertian, Dalil Naqli Q.S. Al-Hajj: 7, Az-Zalzalah: 1-8, Al-Qāri\'ah: 1-11, Tanda Sugrā/Kubrā, Alam Barzakh, 9 Tahapan Akbar, Moral Brake, Studi Kasus, & Kuis HOTS)'
+                        : selectedTextbookChapter === 'k9-bab1'
+                        ? 'Kelas IX Bab 1: Meraih Kemuliaan Derajat dengan Semangat Keilmuan (Q.S. Al-Mujādilah: 11, Q.S. Az-Zumar: 9, Hadis Terkait, Hukum Mim Sukun, Mufradat, & Hikmah)'
+                        : selectedTextbookChapter === 'k8-bab10'
+                        ? 'Kelas VIII Bab 10: Merefleksikan Diri terhadap Sejarah dan Peran Kekhalifahan Islam Pasca Khulafaur Rasyidin: Dinasti Turki Usmani (1299 M - 1924 M)'
+                        : selectedTextbookChapter === 'k8-bab9'
+                        ? 'Kelas VIII Bab 9: Menerapkan Ketentuan Haji dan Umrah (Pengertian, Syarat Rukun Wajib, 3 Tata Cara Pelaksanaan, Manasik Haji, & Hikmah Luhur)'
+                        : selectedTextbookChapter === 'k8-bab8'
+                        ? 'Kelas VIII Bab 8: Menerapkan Makna Cinta Ilmu (Pengertian, Dalil Naqli Q.S. Al-Mujādilah: 11 & Az-Zumar: 9, Ciri Pribadi, Manfaat Berilmu, & Hikmah Luhur)'
+                        : selectedTextbookChapter === 'k8-bab7'
+                        ? 'Kelas VIII Bab 7: Meyakini dan Merefleksikan Iman kepada Para Rasul Allah Swt. (25 Nabi & Rasul, Ulul Azmi, Sifat Wajib, Mustahil, Jaiz, & Hikmah)'
+                        : selectedTextbookChapter === 'k8-bab6'
                         ? 'Kelas VIII Bab 6: Menebarkan Semangat Cinta Tanah Air (Q.S. An-Nisā\' [4]: 66, Hadis Cinta Makkah/Madinah & Piagam Madinah, Hukum Nun Sukun & Tanwin, Mufradat, 4 Keterampilan, & 6 Hikmah)'
                         : selectedTextbookChapter === 'k8-bab5'
                         ? 'Kelas VIII Bab 5: Merefleksikan Diri terhadap Sejarah dan Peran Kekhalifahan Islam Pasca Khulafaur Rasyidin: Dinasti Abbasiyah'
@@ -2354,7 +3006,23 @@ Tiga Dimensi Kesempurnaan Iman:
                         : 'Bab 1: Merengkuh Hakikat Iman (Q.S. An-Nisā’: 136, Q.S. Al-Anfāl: 2-4, Hadis Keimanan & Tajwid Alif Lam)'}
                     </h3>
                     <p className="text-xs text-emerald-100/90 leading-relaxed">
-                      {selectedTextbookChapter === 'k8-bab6'
+                      {selectedTextbookChapter === 'k9-bab4'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas IX Semester 1: 1. Ketentuan penyembelihan hewan (adz-dzabh/an-nahr), kurban (udh-hiyyah), dan akikah (\'aqīqah); 2. Dalil naqli Al-Qur\'an (Q.S. Al-Kautsar: 1-3, Q.S. Al-An\'am: 162-163, Q.S. Al-Hajj: 34 & 37) & Hadits riwayat Muslim tentang ihsan; 3. Syarat, rukun, & 4 saluran leher wajib terputus (Hulqūm, Marī\', dan sepasang Al-Wadajain); 4. Sunnah adab ihsan, hal makruh/diharamkan, & fatwa MUI pemingsanan (stunning); 5. Komparasi kurban vs akikah (waktu 10-13 Dzulhijjah vs hari ke-7/14/21, umur hewan musinnah/jadz\'ah, porsi orang, cara pembagian mentah vs matang manis, larangan upah jagal); 6. Hikmah spiritual meneladani Nabi Ibrahim AS, kepedulian dhuafa, & higienitas ilmiah (exsanguination); 7. 3 Studi kasus nyata, lembar refleksi 8 indikator, & evaluasi kuis HOTS 5 butir soal.'
+                        : selectedTextbookChapter === 'k9-bab3'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas IX Semester 1: 1. Pengertian Cinta Lingkungan (ri\'āyah al-bī\'ah) secara bahasa dan istilah syariat serta kedudukannya dalam Islam; 2. Dalil naqli Al-Qur\'an (Q.S. Ar-Rūm: 41, Q.S. Al-A\'rāf: 56, Q.S. Al-Baqarah: 205, Q.S. Al-Anbiyā\': 107) dengan audio murottal & terjemahan Kemenag RI; 3. Hadits-hadits shahih (HR. Bukhari-Muslim menanam pohon bernilai sedekah jariyah, HR. Ahmad menanam bibit saat kiamat, HR. Ibnu Majah larangan isrāf boros air wudhu, HR. Muslim menyingkirkan duri di jalan, HR. Abu Dawud larangan mengotori sumber air); 4. Pentingnya cinta lingkungan (khalīfah fil ardh, kesetimbangan al-mīzān, alam bertasbih, rahmatan lil \'ālamīn, hifẓ an-nasl, prinsip cagar alam himā & harīm); 5. Bentuk-bentuk kerusakan lingkungan (fasād fil ardh di darat, air, udara, dan satwa); 6. Ciri-ciri mukmin pecinta lingkungan (5 pilar aksi: thahārah ekologis, hemat air/energi, gemar menanam, budaya 3R, advokasi amar ma\'ruf); 7. 6 Hikmah agung cinta lingkungan, 3 studi kasus reflektif nyata, lembar muhasabah 8 indikator, & kuis HOTS 5 butir soal dengan pembahasan mendalam.'
+                        : selectedTextbookChapter === 'k9-bab2'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas IX Semester 1: 1. Pengertian Hari Akhir (bahasa & syariat) serta kedudukan Rukun Iman ke-5; 2. 10 Nama-nama lain Hari Akhir dalam Al-Qur\'an & makna filosofisnya; 3. Dalil naqli Al-Qur\'an (Q.S. Al-Hajj: 7, Q.S. Az-Zalzalah: 1-8, Q.S. Al-Qari\'ah: 1-11) dengan audio murottal & Hadits Shahih Muslim 10 tanda besar kiamat kubra; 4. Klasifikasi Tanda Kiamat Sugrā vs Kubrā disertai fakta kontekstual; 5. Peristiwa Alam Barzakh (sakaratul maut, fitnah kubur Munkar-Nakir, nikmat & siksa kubur, amalan penyelamat); 6. 9 Kronologi Tahapan Akbar Hari Akhir dari Sangkakala 1-2, Ba\'ats, Mahsyar, Syafa\'at \'Uzhma, Hisab, Mizan, As-Shirath, hingga Surga & Neraka; 7. Konsep Rem Moral (Moral Brake) & 5 Dimensi Karakter Pelajar; 8. 3 Studi Kasus Reflektif (flexing, cyberbullying, joki AI), Lembar Muhasabah 8 Dimensi, & Kuis Penalaran HOTS 5 butir soal dengan pembahasan lengkap.'
+                        : selectedTextbookChapter === 'k9-bab1'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas IX Semester 1: 1. Q.S. Al-Mujādilah: 11 dan Q.S. Az-Zumar: 9 sesuai tajwid (Mad Ja\'iz Munfashil, Idzhar Syafawi, Ikhfa Haqiqi, Lam Jalalah Tafkhim, audio tilawah Syaikh Alafasy); 2. Kaidah hukum bacaan Mim Sukun (مْ) terbagi 3: Ikhfa Syafawi (bertemu Ba\'), Idgham Mimi/Mutamatsilain (bertemu Mim), Idzhar Syafawi (26 huruf lainnya dengan peringatan Asyaddu Izhhar pada Wawu dan Fa\') dilengkapi tabel filter interaktif; 3. Mufradat perkata interaktif & terjemah kontekstual Kemenag; 4. Penerapan 4 keterampilan (membaca tartil, menghafal metode tikrar, menulis kaligrafi khat Naskhi bergaris, telaah tafsir); 5. Hadits-hadits shahih thalabul ilmi; 6. 6 Dimensi hikmah keilmuan, studi kasus integritas AI, lembar muhasabah diri 8 dimensi, & kuis HOTS 5 butir soal dengan pembahasan lengkap.'
+                        : selectedTextbookChapter === 'k8-bab10'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas VIII Semester 2: 1. Sejarah berdirinya Dinasti Turki Usmani (Suku Kayi, Ertugrul, Osman I 1299 M, wasiat emas ketaatan); 2. Puncak kejayaan (Muhammad Al-Fatih 1453 M menaklukkan Konstantinopel, Salim I Khadimul Haramain, Sulaiman Al-Qanuni 3 benua); 3. 3 Pilar peradaban (Kanunname & Sistem Millet, Korps Yanisari & Kavaleri Sipahi, Arsitektur Mimar Sinan); 4. Faktor kemunduran & runtuh 1924 M; 5. 4 Dimensi hikmah luhur sejarah, studi kasus adab teknologi, lembar refleksi 8 dimensi, & kuis HOTS.'
+                        : selectedTextbookChapter === 'k8-bab9'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas VIII Semester 2: 1. Pengertian haji dan umrah secara bahasa dan syariat, kedudukan rukun Islam ke-5, dalil naqli Q.S. Ali \'Imran: 97, Q.S. Al-Baqarah: 196, Q.S. Al-Hajj: 27, dan Hadits Shahih balasan haji mabrur; 2. Ketentuan 5 syarat istitha\'ah, 6 rukun haji (Ihram, Wukuf Arafah, Thawaf Ifadhah, Sa\'i Shafa-Marwah, Tahallul, Tertib), 5 rukun umrah, 6 wajib haji, klasifikasi larangan ihram (pria, wanita, umum), serta 4 jenis dam (Tertib-Taqdir, Tertib-Ta\'dil, Takhyir-Ta\'dil, Takhyir-Taqdir); 3. 3 Tata cara pelaksanaan (Haji Tamattu\' dahulukan umrah, Haji Ifrad haji dulu tanpa dam, Haji Qiran haji-umrah sekaligus); 4. Simulasi manasik haji praktis (Lafaz Talbiyah lengkap Arab/latin/arti & audio, 5 Miqat Makani, dan alur kronologis 8-13 Dzulhijjah); 5. 5 Dimensi hikmah luhur ibadah ke Baitullah; 6. Studi kasus antrean & medsos haji masa kini serta lembar refleksi 8 dimensi karakter; 7. Evaluasi 5 butir soal HOTS interaktif.'
+                        : selectedTextbookChapter === 'k8-bab8'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas VIII Semester 2: 1. Pengertian cinta ilmu secara bahasa dan istilah syariat, pembagian hukum Fardhu \'Ain vs Fardhu Kifayah, dan 6 syarat mutlak penuntut ilmu menurut syair Imam Syafi\'i (zaka\', hirsh, ijtihad, dirham, shuhbah ustadz, thulu zaman); 2. Dalil naqli Al-Qur\'an (Q.S. Al-Mujadilah: 11, Q.S. Az-Zumar: 9, Q.S. Thaha: 114, Q.S. Fathir: 28) dengan audio tilawah qari & Hadits Shahih keutamaan ilmu dan amal jariyah; 3. 6 Ciri khas pribadi muslim pecinta ilmu (curiosity tinggi, tekun pantang menyerah, gemar membaca iqra\', tawqir guru, tawadhu\', dan senang berbagi/tutor sebaya); 4. Manfaat berilmu di ranah duniawi & ukhrawi; 5. 6 Hikmah luhur cinta ilmu, studi kasus etika literasi modern/AI, lembar muhasabah 8 indikator, dan evaluasi 5 butir soal HOTS interaktif.'
+                        : selectedTextbookChapter === 'k8-bab7'
+                        ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas VIII Semester 2: 1. Pengertian iman kepada rasul (bahasa, syariat, rukun iman ke-4) dan perbedaan nabi vs rasul; 2. Dalil naqli Al-Qur\'an (Q.S. An-Nisa: 136, Q.S. Al-An\'am: 48, Q.S. Al-Ahzab: 21) & Hadits Jibril; 3. 25 Nabi/Rasul dan 5 Rasul Ulul Azmi (N-I-M-I-M); 4. 5 Tugas utama rasul; 5. Sifat-sifat rasul: 4 sifat wajib (Siddiq, Amanah, Tabligh, Fathonah), 4 sifat mustahil (Kizib, Khianat, Kitman, Baladah), dan 1 sifat jaiz (Al-A\'radhul Basyariyah); 6. 6 Hikmah luhur, studi kasus moral, muhasabah 8 dimensi, dan kuis HOTS.'
+                        : selectedTextbookChapter === 'k8-bab6'
                         ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas VIII Semester 2: 1. Q.S. An-Nisā\' [4]: 66 & Hadits Shahih (Cinta Makkah H.R. At-Tirmidzi, Cinta Madinah H.R. Al-Bukhari, & Piagam Madinah 622 M sebagai dasar ukhuwah wathaniyah); 2. Kaidah tajwid lengkap hukum Nun Sukun (نْ) & Tanwin (Idzhar Halqi 6 huruf, Idgham Bighunnah 4 huruf YANMU & pengecualian Idzhar Mutlaq dunya/bunyan/qinwan/sinwan, Idgham Bilaghunnah 2 huruf lam/ra, Iqlab huruf ba, Ikhfa Haqiqi 15 huruf) disertai tabel filter interaktif; 3. Kamus mufradat perkata interaktif & flashcard hafalan; 4. Penerapan 4 keterampilan (membaca tartil, menghafal metode tikrar 3x3, menulis khat naskhi rasm utsmani, serta studi kasus refleksi etika kebangsaan); 5. 6 Hikmah luhur cinta tanah air, matriks aksi nyata pelajar, lembar refleksi karakter 8 dimensi, & evaluasi 5 soal HOTS.'
                         : selectedTextbookChapter === 'k8-bab5'
                         ? 'Sesuai silabus buku pelajaran PAI & Budi Pekerti SMP Kelas VIII: 1. Sejarah berdirinya Daulah Abbasiyah (gerakan 3 wilayah rahasia Al-Humaimah-Kufah-Khurasan, baiat Abu al-Abbas As-Saffah 750 M, tata kota bundar Baghdad Madinat as-Salam 762 M); 2. Tokoh-tokoh penting (Harun ar-Rasyid, Al-Ma\'mun, Ibnu Sina "Bapak Kedokteran", Al-Khawarizmi "Bapak Aljabar & Algoritma", Ar-Razi, 4 Imam Mazhab & Bukhari-Muslim); 3. Puncak kejayaan The Golden Age (Baitul Hikmah, gerakan penerjemahan berhadiah emas seberat buku, bimaristan gratis, revolusi industri kertas & cek suftajah); 4. Faktor kemunduran & tragedi serangan Mongol Hulagu Khan 1258 M; 5. 5 Hikmah sejarah, studi kasus etika digital, & kuis HOTS.'
@@ -2404,14 +3072,98 @@ Tiga Dimensi Kesempurnaan Iman:
                   <span className="text-xs font-bold text-emerald-200 mr-1">Pilih Bab:</span>
                   <button
                     onClick={() => {
+                      setSelectedTextbookChapter('k9-bab5');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k9-bab5')}
+                  >
+                    <span>🕌 Kls IX Bab 5: Sejarah Masuknya Islam</span>
+                    <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas IX Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k9-bab4');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k9-bab4')}
+                  >
+                    <span>🐑 Kls IX Bab 4: Sembelihan, Kurban & Akikah</span>
+                    <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas IX Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k9-bab3');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k9-bab3')}
+                  >
+                    <span>🌿 Kls IX Bab 3: Cinta Lingkungan</span>
+                    <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas IX Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k9-bab2');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k9-bab2')}
+                  >
+                    <span>🌍 Kls IX Bab 2: Iman Hari Akhir</span>
+                    <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas IX Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k9-bab1');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k9-bab1')}
+                  >
+                    <span>📖 Kls IX Bab 1: Semangat Keilmuan</span>
+                    <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas IX Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k8-bab10');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab10')}
+                  >
+                    <span>🏰 Kls VIII Bab 10: Turki Usmani</span>
+                    <span className="px-1.5 py-0.2 bg-rose-900/60 text-white rounded text-[10px]">Sem 2 Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k8-bab9');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab9')}
+                  >
+                    <span>🕋 Kls VIII Bab 9: Haji & Umrah</span>
+                    <span className="px-1.5 py-0.2 bg-rose-900/60 text-white rounded text-[10px]">Sem 2 Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
+                      setSelectedTextbookChapter('k8-bab8');
+                      setShowKelas7Sem1Detail(true);
+                    }}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab8')}
+                  >
+                    <span>📚 Kls VIII Bab 8: Cinta Ilmu</span>
+                    <span className="px-1.5 py-0.2 bg-rose-900/60 text-white rounded text-[10px]">Sem 2 Baru</span>
+                  </button>
+
+                  <button
+                    onClick={() => {
                       setSelectedTextbookChapter('k8-bab7');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab7'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab7')}
                   >
                     <span>🌟 Kls VIII Bab 7: Iman kepada Para Rasul</span>
                     <span className="px-1.5 py-0.2 bg-rose-900/60 text-white rounded text-[10px]">Sem 2 Baru</span>
@@ -2422,11 +3174,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k8-bab6');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab6'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab6')}
                   >
                     <span>🇮🇩 Kls VIII Bab 6: Cinta Tanah Air</span>
                     <span className="px-1.5 py-0.2 bg-rose-900/60 text-white rounded text-[10px]">Sem 2 Baru</span>
@@ -2437,11 +3185,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k8-bab5');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab5'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab5')}
                   >
                     <span>🏛️ Kls VIII Bab 5: Daulah Abbasiyah</span>
                     <span className="px-1.5 py-0.2 bg-rose-900/60 text-white rounded text-[10px]">Kelas VIII Baru</span>
@@ -2452,11 +3196,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k8-bab4');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab4'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab4')}
                   >
                     <span>🕊️ Kls VIII Bab 4: Penyelenggaraan Jenazah</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas VIII</span>
@@ -2467,11 +3207,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k8-bab3');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab3'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab3')}
                   >
                     <span>❤️ Kls VIII Bab 3: Cinta Rasul</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas VIII</span>
@@ -2482,11 +3218,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k8-bab2');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab2'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab2')}
                   >
                     <span>✨ Kls VIII Bab 2: Iman Kitab-Kitab Allah</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas VIII</span>
@@ -2497,11 +3229,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k8-bab1');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k8-bab1'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k8-bab1')}
                   >
                     <span>🔥 Kls VIII Bab 1: Toleransi QS Al-Hujurat 13</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Kelas VIII</span>
@@ -2512,11 +3240,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab10');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab10'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab10')}
                   >
                     <span>⭐ Bab 10: Bani Umayyah Andalusia</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Sem 2 Baru</span>
@@ -2527,11 +3251,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab9');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab9'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab9')}
                   >
                     <span>Bab 9: Ketentuan Rukhsah</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Lengkap</span>
@@ -2542,11 +3262,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab8');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab8'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab8')}
                   >
                     <span>Bab 8: Makna Bersyukur</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Lengkap</span>
@@ -2557,11 +3273,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab7');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab7'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab7')}
                   >
                     <span>Bab 7: Iman kepada Malaikat</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Sem 2 Lengkap</span>
@@ -2572,11 +3284,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab6');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab6'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab6')}
                   >
                     <span>Bab 6: Taqwa, Al-Baqarah 103, Ali 'Imran 76 & Ghunnah</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Sem 2 Lengkap</span>
@@ -2587,11 +3295,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab5');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab5'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab5')}
                   >
                     <span>Bab 5: Bani Umayyah Damaskus</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Lengkap</span>
@@ -2602,11 +3306,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab4');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab4'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab4')}
                   >
                     <span>Bab 4: Macam-Macam Sujud</span>
                     <span className="px-1.5 py-0.2 bg-emerald-900/60 text-white rounded text-[10px]">Lengkap</span>
@@ -2617,11 +3317,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab3');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab3'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab3')}
                   >
                     <span>Bab 3: Makna Ikhlas Sehari-hari</span>
                   </button>
@@ -2631,11 +3327,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab2');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab2'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab2')}
                   >
                     <span>Bab 2: Meneladani Asmaul Husna</span>
                   </button>
@@ -2645,11 +3337,7 @@ Tiga Dimensi Kesempurnaan Iman:
                       setSelectedTextbookChapter('k7-bab1');
                       setShowKelas7Sem1Detail(true);
                     }}
-                    className={`px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all cursor-pointer flex items-center gap-1.5 ${
-                      selectedTextbookChapter === 'k7-bab1'
-                        ? 'bg-amber-400 text-amber-950 shadow-md font-black'
-                        : 'bg-white/15 text-white hover:bg-white/25'
-                    }`}
+                    className={getChapterBtnStyle(selectedTextbookChapter === 'k7-bab1')}
                   >
                     <span>Bab 1: Al-Qur\'an & Sunnah (Tajwid Alif Lam)</span>
                   </button>
@@ -2657,7 +3345,23 @@ Tiga Dimensi Kesempurnaan Iman:
 
                 {showKelas7Sem1Detail && (
                   <div className="pt-3">
-                    {selectedTextbookChapter === 'k8-bab7' ? (
+                    {selectedTextbookChapter === 'k9-bab5' ? (
+                      <BukuPaiKelas9Sem1Bab5Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k9-bab4' ? (
+                      <BukuPaiKelas9Sem1Bab4Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k9-bab3' ? (
+                      <BukuPaiKelas9Sem1Bab3Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k9-bab2' ? (
+                      <BukuPaiKelas9Sem1Bab2Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k9-bab1' ? (
+                      <BukuPaiKelas9Sem1Bab1Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k8-bab10' ? (
+                      <BukuPaiKelas8Sem2Bab10Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k8-bab9' ? (
+                      <BukuPaiKelas8Sem2Bab9Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k8-bab8' ? (
+                      <BukuPaiKelas8Sem2Bab8Detail onAskAI={askMasterkuAI} />
+                    ) : selectedTextbookChapter === 'k8-bab7' ? (
                       <BukuPaiKelas8Sem2Bab7Detail onAskAI={askMasterkuAI} />
                     ) : selectedTextbookChapter === 'k8-bab6' ? (
                       <BukuPaiKelas8Sem2Bab6Detail onAskAI={askMasterkuAI} />
@@ -2774,7 +3478,23 @@ Tiga Dimensi Kesempurnaan Iman:
                               </span>
                             </div>
                             <p className="text-xs text-white font-medium">
-                              {chapter.id === 'k8-bab7'
+                              {chapter.id === 'k9-bab5'
+                                ? 'Pelajari 4 Teori Masuknya Islam ke Indonesia (Teori Makkah, Gujarat, Persia, & China), 6 Jalur Transmisi Penyebaran Islam (Perdagangan, Perkawinan, Pendidikan Pesantren, Tasawuf, Kesenian, Politik), Kerajaan Islam Perintis (Samudera Pasai, Kesultanan Demak, Aceh Darussalam), Dalil Naqli Q.S. An-Nahl: 125, 5 Hikmah Luhur Sejarah Islam, 3 Studi Kasus Kontemporer, Lembar Muhasabah 8 Indikator, & Kuis HOTS'
+                                : chapter.id === 'k9-bab4'
+                                ? 'Pelajari Ketentuan Penyembelihan Hewan (adz-dzabh/an-nahr), Kurban & Akikah, Dalil Al-Qur\'an Q.S. Al-Kautsar: 1-3, Q.S. Al-An\'am: 162-163, Hadits Ihsan & Menajamkan Pisau (HR. Muslim 1955), 4 Rukun & Syarat Penyembelihan, 4 Saluran Leher Wajib Terputus (Hulqum, Mari\', Wadajain), Fatwa MUI Pemingsanan (Stunning), Komparasi Kurban vs Akikah (Waktu, Umur Musinnah, Pembagian Daging Mentah vs Matang, Larangan Upah Jagal), Hikmah Spiritual & Higienitas Medis, 3 Studi Kasus, Muhasabah 8 Indikator, & Kuis HOTS'
+                                : chapter.id === 'k9-bab3'
+                                ? 'Pelajari Pengertian Cinta Lingkungan (ri\'āyah al-bī\'ah), Dalil Naqli Q.S. Ar-Rūm: 41, Q.S. Al-A\'rāf: 56, Q.S. Al-Baqarah: 205, Hadits Menanam Pohon (HR. Bukhari-Muslim) & Larangan Boros Air (HR. Ibnu Majah), 6 Urgensi Lingkungan (Khalifah, Al-Mizan, Hima, Harim), Bentuk Kerusakan Lingkungan (Darat, Laut, Udara, Satwa), 5 Pilar Ciri Cinta Lingkungan, 6 Hikmah Luhur, 3 Studi Kasus Reflektif, Lembar Muhasabah 8 Indikator, & Kuis HOTS'
+                                : chapter.id === 'k9-bab2'
+                                ? 'Pelajari Pengertian Bahasa & Istilah, 10 Nama Lain Hari Akhir, Dalil Naqli Q.S. Al-Hajj: 7, Q.S. Az-Zalzalah: 1-8, Q.S. Al-Qāri\'ah: 1-11 dengan audio murottal, Klasifikasi Tanda Kiamat Sugrā & Kubrā, Peristiwa Alam Barzakh (Munkar-Nakir & Siksa Kubur), 9 Tahapan Akbar Hari Akhir (Ba\'ats, Mahsyar, Syafa\'at, Hisab, Mizan, Shirath, Surga & Neraka), Konsep Moral Brake, 3 Studi Kasus Digital, Lembar Muhasabah 8 Dimensi, & Kuis HOTS'
+                                : chapter.id === 'k9-bab1'
+                                ? 'Pelajari Q.S. Al-Mujādilah: 11, Q.S. Az-Zumar: 9, Kaidah Hukum Mim Sukun (Ikhfa Syafawi, Idgham Mimi, Idzhar Syafawi), Mufradat Perkata, 4 Keterampilan (Baca Tartil, Hafal Tikrar, Tulis Khat Naskhi, Jelaskan), Hadits Kewajiban Menuntut Ilmu, 6 Dimensi Hikmah Keilmuan, Studi Kasus Integritas AI, Muhasabah 8 Dimensi, & Kuis HOTS'
+                                : chapter.id === 'k8-bab10'
+                                ? 'Pelajari Sejarah Berdirinya Dinasti Turki Usmani (Suku Kayi, Ertugrul, Osman I 1299 M, Wasiat Emas), Puncak Kejayaan (Sultan Muhammad Al-Fatih & Penaklukan Konstantinopel 1453 M, Sultan Salim I Khadimul Haramain, Sultan Sulaiman Al-Qanuni 3 Benua), 3 Pilar Peradaban (Supremasi Hukum Kanunname & Sistem Millet, Korps Yanisari & Sipahi, Arsitektur Megah Mimar Sinan & Kulliye), Faktor Kemunduran Internal & Eksternal (Hedonisme Sultan, Intrik Harem, Korupsi, Yanisari Memberontak, Larangan Mesin Cetak, The Sick Man of Europe, Runtuh 1924 M), 4 Dimensi Hikmah Sejarah, 3 Kasus Reflektif, Muhasabah 8 Dimensi, & Kuis HOTS'
+                                : chapter.id === 'k8-bab9'
+                                ? 'Pelajari Pengertian Haji & Umrah, Syarat Istitha\'ah, Rukun vs Wajib Haji, Larangan Ihram & 4 Jenis Dam, 3 Tata Cara Pelaksanaan (Tamattu\', Ifrad, Qiran), Panduan Manasik Praktis (Lafaz Talbiyah Arab/Latin/Arti/Audio, 5 Miqat Makani, Alur Kronologis 8-13 Dzulhijjah), 5 Dimensi Hikmah Luhur, Studi Kasus Antrean/Medsos, Lembar Muhasabah 8 Dimensi, & Kuis HOTS'
+                                : chapter.id === 'k8-bab8'
+                                ? 'Pelajari Pengertian Cinta Ilmu, Pembagian Fardhu \'Ain vs Kifayah, 6 Syarat Penuntut Ilmu Imam Syafi\'i, Dalil Al-Qur\'an (Q.S. Al-Mujādilah: 11, Az-Zumar: 9, Thāhā: 114) & Hadis Shahih, 6 Ciri Pribadi Pecinta Ilmu, Manfaat Dunia-Akhirat, 6 Hikmah Luhur, Studi Kasus Etika AI & Kuis HOTS'
+                                : chapter.id === 'k8-bab7'
                                 ? 'Pelajari Pengertian Iman kepada Rasul & Rukun Iman ke-4, Dalil Al-Qur\'an (Q.S. An-Nisā\' [4]: 136, Al-An\'ām [6]: 48, Al-Ahzāb [33]: 21) & Hadits Jibril, Daftar Lengkap 25 Nabi/Rasul, 5 Rasul Ulul Azmi (N-I-M-I-M), 5 Tugas Utama Rasul, 4 Sifat Wajib (Ṣiddīq, Amānah, Tablīgh, Faṭānah), 4 Sifat Mustahil (Kiżib, Khiyānah, Kitmān, Balādah), 1 Sifat Jaiz (Al-A\'rāḍul Basyariyyah), Studi Kasus Etika Pelajar & Kuis HOTS'
                                 : chapter.id === 'k8-bab6'
                                 ? 'Pelajari Q.S. An-Nisā\' [4]: 66, Hadis Cinta Makkah & Madinah, Piagam Madinah 622 M, Kaidah Lengkap Hukum Nun Sukun (نْ) & Tanwin (Idzhar Halqi, Idgham Bighunnah/Bilaghunnah, Iqlab, Ikhfa), Kamus Mufradat Perkata, 4 Keterampilan (Baca, Hafal, Tulis Naskhi, Jelaskan), 6 Hikmah & Kuis HOTS'
@@ -2811,7 +3531,23 @@ Tiga Dimensi Kesempurnaan Iman:
                           </div>
                           <button
                             onClick={() => {
-                              if (chapter.id === 'k8-bab7') {
+                              if (chapter.id === 'k9-bab5') {
+                                setSelectedTextbookChapter('k9-bab5');
+                              } else if (chapter.id === 'k9-bab4') {
+                                setSelectedTextbookChapter('k9-bab4');
+                              } else if (chapter.id === 'k9-bab3') {
+                                setSelectedTextbookChapter('k9-bab3');
+                              } else if (chapter.id === 'k9-bab2') {
+                                setSelectedTextbookChapter('k9-bab2');
+                              } else if (chapter.id === 'k9-bab1') {
+                                setSelectedTextbookChapter('k9-bab1');
+                              } else if (chapter.id === 'k8-bab10') {
+                                setSelectedTextbookChapter('k8-bab10');
+                              } else if (chapter.id === 'k8-bab9') {
+                                setSelectedTextbookChapter('k8-bab9');
+                              } else if (chapter.id === 'k8-bab8') {
+                                setSelectedTextbookChapter('k8-bab8');
+                              } else if (chapter.id === 'k8-bab7') {
                                 setSelectedTextbookChapter('k8-bab7');
                               } else if (chapter.id === 'k8-bab6') {
                                 setSelectedTextbookChapter('k8-bab6');
